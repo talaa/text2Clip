@@ -1,14 +1,12 @@
 from moviepy import *
 import os
 
-# Paths to the audio and images folders
-audio_folder = "Audio"
-images_folder = "images"
 
 
-def create_video():
+
+def create_video(audio_dir="Audio", images_dir="images", output_file="output_movie.mp4"):
     # Get the list of audio files (ensure sorting is correct)
-    scene_files = sorted([f for f in os.listdir(audio_folder) if f.endswith(".mp3")])
+    scene_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(".mp3")])
     print(scene_files)
     # Create a list to hold all video clips
     video_clips = []
@@ -17,8 +15,8 @@ def create_video():
     for scene_file in scene_files:
         scene_name = os.path.splitext(scene_file)[0]  # Remove .mp3 extension
         
-        image_path = os.path.join(images_folder, f"{scene_name}.png")
-        audio_path = os.path.join(audio_folder, scene_file)
+        image_path = os.path.join(images_dir, f"{scene_name}.png")
+        audio_path = os.path.join(audio_dir, scene_file)
 
         # Ensure the image file exists
         if not os.path.exists(image_path):
@@ -51,7 +49,7 @@ def create_video():
         final_video = concatenate_videoclips(video_clips)
 
         # Export the final video to a file
-        output_file = "output_movie.mp4"
+        #output_file = "output_movie.mp4"
         final_video.write_videofile(
             output_file, 
             fps=24, 
@@ -60,7 +58,7 @@ def create_video():
             audio=True
             
             )
-
+        final_video.close()  # Explicitly close the video object
         print(f"Movie created successfully: {output_file}")
     else:
         print("No valid video clips created. Check your files.")

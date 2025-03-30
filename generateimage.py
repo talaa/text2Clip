@@ -14,9 +14,9 @@ TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 client = Together(api_key=TOGETHER_API_KEY)
 
 
-def generate_image(prompt, output_filename):
+def generate_image(prompt, output_filename,output_dir="images"):
     
-    
+    os.makedirs(output_dir, exist_ok=True)
 
     response = client.images.generate(
         prompt=prompt,
@@ -32,7 +32,7 @@ def generate_image(prompt, output_filename):
     )
     image_url=(response.data[0].url)  # Print the base64-encoded image data
     # Ensure the 'images' directory exists
-    images_dir = "images"
+    images_dir = output_dir
 
     # Save image
     try:
