@@ -1,0 +1,32 @@
+# Health Check
+GET http://localhost:5000/health
+
+###
+
+# Generate Scenes
+POST http://localhost:5000/createscenes
+Content-Type: application/json
+
+{
+    "topic": "Exploring the universe",
+    "num_scenes": 3
+}
+
+###
+
+# Process Scenes (replace with actual scenes output from previous request)
+POST http://localhost:5000/process_scenes
+Content-Type: application/json
+
+{
+    "scenes": [
+        {"image_prompt": "A vast starry sky with nebulae", "text": "The universe is infinite and mysterious"},
+        {"image_prompt": "A spaceship orbiting a blue planet", "text": "Humans explore beyond Earth"},
+        {"image_prompt": "A distant planet with alien landscapes", "text": "Life might exist elsewhere"}
+    ]
+}
+
+###
+
+# Create Video
+POST http://localhost:5000/create_video
