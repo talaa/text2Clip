@@ -7,37 +7,32 @@ import json
 import os
 import shutil
 import uuid
+import threading
 import time
 import logging
 import io
 from dotenv import load_dotenv
 
-# Initialize Flask app
 app = Flask(__name__)
-
-# Load environment variables
 load_dotenv()
-
-# Base directory for temporary files
 BASE_TEMP_DIR = "temp"
-
-# Ensure base temp directory exists
 os.makedirs(BASE_TEMP_DIR, exist_ok=True)
 
-# Set up logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s:%(name)s: %(message)s',
+    handlers=[logging.FileHandler("app.log"), logging.StreamHandler()]
+)
 logger = logging.getLogger(__name__)
 
 def safe_rmtree(path, retries=3, delay=0.5):
-    """Safely remove a directory with minimal retries."""
     for attempt in range(retries):
         try:
             shutil.rmtree(path)
             logger.debug(f"Successfully deleted {path}")
             return True
         except PermissionError as e:
-            logger.warning(f"Attempt {attempt + 1}/{retries} failed to delete {path}: {e}")
-            # Log which files are locked
+            logger.warning(f"Attempt {attempt + 1}/{retries} failed: {e}")
             for root, dirs, files in os.walk(path, topdown=False):
                 for file in files:
                     file_path = os.path.join(root, file)
@@ -48,13 +43,13 @@ def safe_rmtree(path, retries=3, delay=0.5):
             if attempt < retries - 1:
                 time.sleep(delay)
             else:
-                logger.error(f"Could not delete {path} after {retries} attempts; will defer cleanup")
+                logger.error(f"Could not delete {path} after {retries} attempts")
                 return False
     return True
 
 def cleanup_old_temp_dirs(max_age_hours=24):
-    """Clean up old temp directories older than max_age_hours."""
     now = time.time()
+    deleted = 0
     for folder in os.listdir(BASE_TEMP_DIR):
         path = os.path.join(BASE_TEMP_DIR, folder)
         if os.path.isdir(path):
@@ -62,44 +57,37 @@ def cleanup_old_temp_dirs(max_age_hours=24):
             age_hours = (now - creation_time) / 3600
             if age_hours > max_age_hours:
                 logger.debug(f"Cleaning up old directory: {path}")
-                safe_rmtree(path)
+                if safe_rmtree(path):
+                    deleted += 1
+    return deleted
 
-@app.route('/generate_clip', methods=['POST'])
-def generate_video():
-    temp_dir = None
-    output_file = None
+def update_status(task_dir, status, output_file=None):
+    status_file = os.path.join(task_dir, "status.json")
+    data = {"status": status}
+    if output_file:
+        data["output_file"] = output_file
+    with open(status_file, 'w') as f:
+        json.dump(data, f)
+
+def generate_video_async(task_id, topic, num_scenes):
+    task_dir = os.path.join(BASE_TEMP_DIR, task_id)
+    audio_dir = os.path.join(task_dir, "Audio")
+    images_dir = os.path.join(task_dir, "images")
+    os.makedirs(audio_dir, exist_ok=True)
+    os.makedirs(images_dir, exist_ok=True)
+    logger.debug(f"Task {task_id} started in {task_dir}")
+
     try:
-        # Get user input
-        data = request.get_json()
-        if not data or "topic" not in data or "num_scenes" not in data:
-            return jsonify({"error": "Missing topic or num_scenes"}), 400
-        
-        topic = data["topic"]
-        num_scenes = data["num_scenes"]
-        
-        if not isinstance(num_scenes, int) or num_scenes <= 0:
-            return jsonify({"error": "num_scenes must be a positive integer"}), 400
-
-        # Create a unique directory for this request
-        request_id = str(uuid.uuid4())
-        temp_dir = os.path.join(BASE_TEMP_DIR, request_id)
-        audio_dir = os.path.join(temp_dir, "Audio")
-        images_dir = os.path.join(temp_dir, "images")
-        os.makedirs(audio_dir, exist_ok=True)
-        os.makedirs(images_dir, exist_ok=True)
-        logger.debug(f"Created temp directory: {temp_dir}")
-
-        # Step 1: Generate scenes
+        update_status(task_dir, "Generating scenes")
         scenes = create_scenes(topic, num_scenes)
         scenes = scenes.strip("```json\n").strip()
         scenes_data = json.loads(scenes)
         scenes_array = scenes_data.get("scenes", [])
-        
         if not scenes_array:
-            safe_rmtree(temp_dir)
-            return jsonify({"error": "No scenes generated"}), 500
+            update_status(task_dir, "Error: No scenes generated")
+            return
 
-        # Step 2: Process scenes
+        update_status(task_dir, "Processing scenes")
         for index, scene in enumerate(scenes_array):
             image_prompt = scene.get("image_prompt", "")
             text = scene.get("text", "")
@@ -107,48 +95,100 @@ def generate_video():
             generate_image(image_prompt, scene_id, output_dir=images_dir)
             text2speech(text, scene_id, output_dir=audio_dir)
 
-        # Step 3: Create video
-        output_file = os.path.join(temp_dir, "output_movie.mp4")
+        update_status(task_dir, "Creating video")
+        output_file = os.path.join(task_dir, "output_movie.mp4")
         create_video(audio_dir=audio_dir, images_dir=images_dir, output_file=output_file)
 
         if not os.path.exists(output_file):
-            safe_rmtree(temp_dir)
-            return jsonify({"error": "Video creation failed"}), 500
+            update_status(task_dir, "Error: Video creation failed")
+            return
 
-        # Step 4: Send video using a file-like object
-        with open(output_file, 'rb') as f:
-            video_data = io.BytesIO(f.read())
-        response = send_file(
-            video_data,
-            mimetype='video/mp4',
-            as_attachment=True,
-            download_name="output_movie.mp4"
-        )
+        update_status(task_dir, "Done", output_file=output_file)
 
-        # Step 5: Attempt immediate cleanup (minimal retries)
-        logger.debug(f"Sent {output_file}; attempting cleanup")
-        if not safe_rmtree(temp_dir):
-            logger.info(f"Deferred cleanup for {temp_dir} to next startup")
-
-        return response
-
-    except json.JSONDecodeError:
-        if temp_dir and os.path.exists(temp_dir):
-            safe_rmtree(temp_dir)
-        return jsonify({"error": "Invalid JSON format in scenes"}), 500
     except Exception as e:
-        if temp_dir and os.path.exists(temp_dir):
-            safe_rmtree(temp_dir)
-        return jsonify({"error": str(e)}), 500
-    finally:
-        if temp_dir and os.path.exists(temp_dir):
-            logger.debug(f"Final cleanup attempt for {temp_dir}")
-            safe_rmtree(temp_dir)
+        update_status(task_dir, f"Error: {str(e)}")
+        logger.error(f"Task {task_id} failed: {e}")
+
+@app.route('/generate_clip', methods=['POST'])
+def start_generate_video():
+    data = request.get_json()
+    if not data or "topic" not in data or "num_scenes" not in data:
+        return jsonify({"error": "Missing topic or num_scenes"}), 400
+    
+    topic = data["topic"]
+    num_scenes = data["num_scenes"]
+    
+    if not isinstance(num_scenes, int) or num_scenes <= 0:
+        return jsonify({"error": "num_scenes must be a positive integer"}), 400
+    if num_scenes > 6:
+        return jsonify({"error": "num_scenes cannot exceed 6"}), 400
+
+    task_id = str(uuid.uuid4())
+    os.makedirs(os.path.join(BASE_TEMP_DIR, task_id), exist_ok=True)
+    update_status(os.path.join(BASE_TEMP_DIR, task_id), "Queued")
+    threading.Thread(target=generate_video_async, args=(task_id, topic, num_scenes)).start()
+    return jsonify({"task_id": task_id}), 202
+
+@app.route('/progress/<task_id>', methods=['GET'])
+def get_progress(task_id):
+    task_dir = os.path.join(BASE_TEMP_DIR, task_id)
+    status_file = os.path.join(task_dir, "status.json")
+    if not os.path.exists(status_file):
+        return jsonify({"state": "PENDING", "status": "Task not found or queued"}), 404
+    
+    with open(status_file, 'r') as f:
+        status_data = json.load(f)
+    
+    state = "PROGRESS" if status_data["status"].startswith("Error") or status_data["status"] == "Done" else "PROGRESS"
+    if status_data["status"].startswith("Error"):
+        state = "FAILURE"
+    elif status_data["status"] == "Done":
+        state = "SUCCESS"
+    
+    response = {"state": state, "status": status_data["status"]}
+    if state == "SUCCESS":
+        response["download_url"] = f"/download/{task_id}"
+    return jsonify(response)
+
+@app.route('/download/<task_id>', methods=['GET'])
+def download_video(task_id):
+    task_dir = os.path.join(BASE_TEMP_DIR, task_id)
+    status_file = os.path.join(task_dir, "status.json")
+    if not os.path.exists(status_file):
+        return jsonify({"error": "Task not found"}), 404
+    
+    with open(status_file, 'r') as f:
+        status_data = json.load(f)
+    
+    if status_data["status"] != "Done":
+        return jsonify({"error": "Task not completed or failed"}), 400
+    
+    output_file = status_data["output_file"]
+    if not os.path.exists(output_file):
+        return jsonify({"error": "Video file not found"}), 500
+
+    with open(output_file, 'rb') as f:
+        video_data = io.BytesIO(f.read())
+    response = send_file(
+        video_data,
+        mimetype='video/mp4',
+        as_attachment=True,
+        download_name="output_movie.mp4"
+    )
+    
+    if not safe_rmtree(task_dir):
+        logger.info(f"Deferred cleanup for {task_dir}")
+    return response
+
+@app.route('/cleanup', methods=['POST'])
+def manual_cleanup():
+    deleted = cleanup_old_temp_dirs()
+    return jsonify({"message": f"Cleaned up {deleted} old temporary directories"}), 200
 
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
-    cleanup_old_temp_dirs()  # Clean up old folders on startup
+    cleanup_old_temp_dirs()
     app.run(host='0.0.0.0', port=5000, debug=True)
