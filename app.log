@@ -325,3 +325,5 @@
 2025-03-30 22:16:19,591 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
 2025-03-30 22:20:06,609 DEBUG:__main__: Successfully deleted temp\22cea94b-a75e-4449-a558-e489b5f19816
 2025-03-30 22:20:06,610 INFO:werkzeug: 127.0.0.1 - - [30/Mar/2025 22:20:06] "GET /download/22cea94b-a75e-4449-a558-e489b5f19816 HTTP/1.1" 200 -
+2025-03-31 01:50:29,432 INFO:werkzeug: 127.0.0.1 - - [31/Mar/2025 01:50:29] "GET /health HTTP/1.1" 200 -
+2025-03-31 02:03:07,621 INFO:werkzeug: 127.0.0.1 - - [31/Mar/2025 02:03:07] "[33mOPTIONS /generate_video HTTP/1.1[0m" 404 -
