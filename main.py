@@ -22,7 +22,7 @@ BASE_TEMP_DIR = "temp"
 os.makedirs(BASE_TEMP_DIR, exist_ok=True)
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format='%(asctime)s %(levelname)s:%(name)s: %(message)s',
     handlers=[logging.FileHandler("app.log"), logging.StreamHandler()]
 )

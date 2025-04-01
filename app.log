@@ -7813,3 +7813,5 @@
 2025-04-01 01:39:14,249 INFO:werkzeug:  * Restarting with stat
 2025-04-01 01:39:17,092 WARNING:werkzeug:  * Debugger is active!
 2025-04-01 01:39:17,095 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-01 14:45:54,539 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\main.py', reloading
+2025-04-01 14:45:55,127 INFO:werkzeug:  * Restarting with stat
