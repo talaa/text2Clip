@@ -9,7 +9,8 @@ Example Output:
     "scenes": [
         {{
             "image_prompt": "A beautiful depiction of the first scene.",
-            "text": "This is the first scene."
+            "text": "This is the first scene.",
+            "summary": "A brief summary of the first scene."
         }}
     ]
 }}

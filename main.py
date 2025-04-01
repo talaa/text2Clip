@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS  # Import CORS
 from text2speech import text2speech
 from scenecreator import createscenes as create_scenes
 from generateimage import generate_image
@@ -14,6 +15,8 @@ import io
 from dotenv import load_dotenv
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
 load_dotenv()
 BASE_TEMP_DIR = "temp"
 os.makedirs(BASE_TEMP_DIR, exist_ok=True)
@@ -97,7 +100,7 @@ def generate_video_async(task_id, topic, num_scenes):
 
         update_status(task_dir, "Creating video")
         output_file = os.path.join(task_dir, "output_movie.mp4")
-        create_video(audio_dir=audio_dir, images_dir=images_dir, output_file=output_file)
+        create_video(audio_dir=audio_dir, images_dir=images_dir, output_file=output_file,scenes_array=scenes_array)
 
         if not os.path.exists(output_file):
             update_status(task_dir, "Error: Video creation failed")
