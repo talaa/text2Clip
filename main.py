@@ -13,6 +13,7 @@ import time
 import logging
 import io
 from dotenv import load_dotenv
+import psutil
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -79,10 +80,13 @@ def generate_video_async(task_id, topic, num_scenes):
     os.makedirs(audio_dir, exist_ok=True)
     os.makedirs(images_dir, exist_ok=True)
     logger.debug(f"Task {task_id} started in {task_dir}")
+    logger.debug(f"Initial memory usage: {get_memory_usage()}")
 
     try:
         update_status(task_dir, "Generating scenes")
         scenes = create_scenes(topic, num_scenes)
+        logger.debug(f"Memory usage after scene generation: {get_memory_usage()}")
+
         scenes = scenes.strip("```json\n").strip()
         scenes_data = json.loads(scenes)
         scenes_array = scenes_data.get("scenes", [])
@@ -96,11 +100,14 @@ def generate_video_async(task_id, topic, num_scenes):
             text = scene.get("text", "")
             scene_id = f"scene{index}"
             generate_image(image_prompt, scene_id, output_dir=images_dir)
+            logger.debug(f"Memory usage after generating image {scene_id}: {get_memory_usage()}")
             text2speech(text, scene_id, output_dir=audio_dir)
+            logger.debug(f"Memory usage after generating audio {scene_id}: {get_memory_usage()}")
 
         update_status(task_dir, "Creating video")
         output_file = os.path.join(task_dir, "output_movie.mp4")
-        create_video(audio_dir=audio_dir, images_dir=images_dir, output_file=output_file,scenes_array=scenes_array)
+        create_video(audio_dir=audio_dir, images_dir=images_dir, output_file=output_file, scenes_array=scenes_array)
+        logger.debug(f"Memory usage after video creation: {get_memory_usage()}")
 
         if not os.path.exists(output_file):
             update_status(task_dir, "Error: Video creation failed")
@@ -111,6 +118,16 @@ def generate_video_async(task_id, topic, num_scenes):
     except Exception as e:
         update_status(task_dir, f"Error: {str(e)}")
         logger.error(f"Task {task_id} failed: {e}")
+
+def get_memory_usage():
+    """Returns the memory usage of the current process in MB."""
+    process = psutil.Process()
+    memory_info = process.memory_info()
+    return {
+        "rss": memory_info.rss / (1024 * 1024),  # Resident Set Size in MB
+        "vms": memory_info.vms / (1024 * 1024),  # Virtual Memory Size in MB
+        "percent": psutil.virtual_memory().percent  # System-wide memory usage percentage
+    }
 
 @app.route('/generate_clip', methods=['POST'])
 def start_generate_video():
@@ -191,6 +208,15 @@ def manual_cleanup():
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({"status": "healthy"}), 200
+
+@app.route('/memory', methods=['GET'])
+def memory_usage():
+    memory = get_memory_usage()
+    return jsonify({
+        "rss_mb": memory["rss"],
+        "vms_mb": memory["vms"],
+        "system_memory_percent": memory["percent"]
+    }), 200
 
 if __name__ == '__main__':
     cleanup_old_temp_dirs()
