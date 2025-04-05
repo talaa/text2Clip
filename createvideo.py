@@ -54,7 +54,7 @@ def create_video(audio_dir="Audio", images_dir="images", output_file="output_mov
         composite_clip = CompositeVideoClip([image_clip, text_clip])
         
         # Set the audio of the image clip to the loaded audio
-        video_clip = composite_clip.with_audio([audio_clip])
+        video_clip = composite_clip.with_audio(audio_clip)
         if video_clip.audio is None:
             print(f"Error: Audio not attached to {scene_name}")
         else:

@@ -7815,3 +7815,633 @@
 2025-04-01 01:39:17,095 INFO:werkzeug:  * Debugger PIN: 206-020-201
 2025-04-01 14:45:54,539 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\main.py', reloading
 2025-04-01 14:45:55,127 INFO:werkzeug:  * Restarting with stat
+2025-04-05 03:36:52,051 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-04-05 03:36:52,052 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-05 03:36:52,054 INFO:werkzeug:  * Restarting with stat
+2025-04-05 03:36:54,128 WARNING:werkzeug:  * Debugger is active!
+2025-04-05 03:36:54,133 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-05 03:38:50,511 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:38:50] "[35m[1mPOST /generate_clip HTTP/1.1[0m" 202 -
+2025-04-05 03:38:50,512 DEBUG:__main__: Task 89f5426b-6be3-49ad-beed-c347c52a2fdf started in temp\89f5426b-6be3-49ad-beed-c347c52a2fdf
+2025-04-05 03:38:50,522 DEBUG:openai._base_client: Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'HTTP-Referer': '<YOUR_SITE_URL>', 'X-Title': 'Text 2 Video'}, 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': [{'type': 'text', 'text': '\nYou are a world-class scene generator. Given a topic and a number of scenes, \ngenerate a structured sequence in JSON format. Each scene must include:\n- "image_prompt": A detailed visual description optimized for AI image generation.\n- "text": A vivid narrative description.\n\nExample Output:\n{\n    "scenes": [\n        {\n            "image_prompt": "A beautiful depiction of the first scene.",\n            "text": "This is the first scene.",\n            "summary": "A brief summary of the first scene."\n        }\n    ]\n}\n\nTopic: Exploring the faith with Artificial intelligence\nNumber of Scenes: 2\n'}]}], 'model': 'google/gemini-2.5-pro-exp-03-25:free'}, 'extra_json': {}}
+2025-04-05 03:38:50,579 DEBUG:openai._base_client: Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2025-04-05 03:38:50,580 DEBUG:httpcore.connection: connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-05 03:38:50,662 DEBUG:httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000219669E44A0>
+2025-04-05 03:38:50,663 DEBUG:httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000002194FB6D150> server_hostname='openrouter.ai' timeout=5.0
+2025-04-05 03:38:50,949 DEBUG:httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000219669B4080>
+2025-04-05 03:38:50,950 DEBUG:httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-04-05 03:38:50,951 DEBUG:httpcore.http11: send_request_headers.complete
+2025-04-05 03:38:50,951 DEBUG:httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-04-05 03:38:50,952 DEBUG:httpcore.http11: send_request_body.complete
+2025-04-05 03:38:50,953 DEBUG:httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-04-05 03:38:51,297 DEBUG:httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Apr 2025 01:38:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'x-clerk-auth-message', b'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)'), (b'x-clerk-auth-reason', b'token-invalid'), (b'x-clerk-auth-status', b'signed-out'), (b'Vary', b'Accept-Encoding'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92b554127b5218d8-FRA'), (b'Content-Encoding', b'gzip')])
+2025-04-05 03:38:51,298 INFO:httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-05 03:38:51,300 DEBUG:httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-04-05 03:39:07,893 DEBUG:httpcore.http11: receive_response_body.complete
+2025-04-05 03:39:07,893 DEBUG:httpcore.http11: response_closed.started
+2025-04-05 03:39:07,894 DEBUG:httpcore.http11: response_closed.complete
+2025-04-05 03:39:07,894 DEBUG:openai._base_client: HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 05 Apr 2025 01:38:52 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'x-clerk-auth-message': 'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)', 'x-clerk-auth-reason': 'token-invalid', 'x-clerk-auth-status': 'signed-out', 'vary': 'Accept-Encoding', 'server': 'cloudflare', 'cf-ray': '92b554127b5218d8-FRA', 'content-encoding': 'gzip'})
+2025-04-05 03:39:07,895 DEBUG:openai._base_client: request_id: None
+2025-04-05 03:39:07,898 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A highly detailed, ethereal image. A beam of soft light illuminates a translucent, glowing AI core (represented by intricate, interwoven circuits and subtle light patterns) floating weightlessly in a minimalist, modern sanctuary-like room. Projected around the core are shimmering, semi-transparent holographic displays showing fragments of ancient scripture (Hebrew, Sanskrit, Arabic, Latin visible), complex theological diagrams, and sacred geometric patterns. The atmosphere is serene and contemplative. Style: photorealistic with ethereal, glowing elements, cinematic lighting.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-05 03:39:07,899 DEBUG:urllib3.util.retry: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2025-04-05 03:39:07,901 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.xyz:443
+2025-04-05 03:39:10,351 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-05 03:39:10,414 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92b5547eae3bd25e-FRA response_code=200
+2025-04-05 03:39:10,417 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-05 03:39:11,101 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/p4El5sLXnen6NzhGM_v2AnQn2NlYJhs41fhejp3MRng/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzgyZmJhMzYxNGEyZWEwMGZhNmQ3YjcyYjk5NTBkMzA3MWE0NzUyOTlkNjU4MzBjYWE4OWI4MjhjOWZhYzk0Njc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ1BFUEFISkNPJTJGMjAyNTA0MDUlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDA1VDAxMzkxMVomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFS3IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpITUVVQ0lRRDVXUkFoUWtRWDVKZ0xSTVZRVERLY01mUW1kNnVhamx1U0RVSXRGJTJGNnd2UUlnYnJNdkhTdnNYd1lJelBIVVBNUkp2VjBVUzRTeSUyQlliZzcxb1ElMkZRaE1uV29xa0FVSUl4QUFHZ3cxT1RnM01qWXhOak0zT0RBaURFTUxhWW85ODdNTDlMJTJGSk95cnRCQTR5c3FmWlRJTkdWN3dUSSUyQlVEN1pjaWQ4NzB5YWlmQ0tIcUs1aEluWThLJTJCVHlpdE5ZdHBOUENWc2lMaXlGMXl1bHNMNHlMeEdsRU00RmNncExFMElVU2lBYlNQRDlaUkxmRENHS21wN1cyRSUyRkc1QWx4dzRmR1BYS1hlR2xoNjlBNFBGWTNOTWl6eFpuSjBKa3hyREVxVm9QOUVvS0xmRVYxQyUyQkw3bUk1d3FiUlpObnNCJTJCazNhMEtlQTgxazBBMGVOM2MwdVZISHgxQzJ5RUhPMUs2RFhvM3k4NUFBTHA5WXhDQmZEWWEyWWVqdmd6MHZzOFQzcExhUWRSdk1URmxWUCUyQkhsMWZGdENSa2d5enE1dVhrYXRMWWFvSkdTU29FOVg2TFlwcjlRRjE1NzZwVUolMkJQemQzNTFwWnl1UWxZWVV5RTB6a0cxNWJ5ZFRTWlU0ekZIaiUyQm1pMmZLbnQlMkZtckVmZGtHWHlkbXZmSFZzZ2tVUTB4MG9lUnh5aHJpR3ZTRXBiRDFNMEI2d2VhTUsyRWN6JTJGREtKYnlaOVZZSyUyRmNYJTJCZE5ZNGZ4Y3RmdW1NTHZjJTJGdXU3NnlaNTQ1QmtWQm54MU9VeVRvQ0lBWTNjZXAlMkZhdFQ4dGxaUGtGbXpDeUZBZGttaU9JNW4za1ZXJTJGc3BLUG95TWI1dU9OOFRXUmZCeGpWbE9saENNZHRXOTQ1VHNCUTJkRDlIYzFFbzBlbllRUHowV0glMkJSJTJGazdFJTJGaUdnUzh6Ylk0Z3FiVXNrYXdzeVlPTU9qS2R0JTJGS3hsMGJVc05XRTZVVGtjZ3BBbG52T2VKQ0ZuZjczcGZUOEFtTnRIelZweVZxajlHYkNzVThpZGllNVUwS0tYRTR6NEE0MDElMkZkdlNsYk5ZcTBVUXRYcm8zNEVJNVFZbFdBTEtFUkJEbFZQR2RhdVJmaEE3YXlDUGhRdFhTZmhUaGJnY24lMkJiJTJGdjNXQ2FvJTJGR3pucnNYM2VwJTJCT0ladGZsJTJGYVZvOGFheFMxZ3hJREdIYTRZUTVaJTJCbVdHMURwRTNLdDRxR2NxVDdIWlJCNkdmTUwzamVDellWckp2M2kxaSUyQkZhdmUlMkIlMkY4NDJwbDU3eklucXdjb2xQQlRDJTJGazhLJTJGQmpxYkFRUGx1cVVWMDJ6amlRZ0d1S2c1M0xVNEM3T2htS1hqWlVSbk9yJTJCNkglMkJqbDBoVFc5Nmt6dGNDJTJGb3hXOThXSmh1UHl0SXhwRVRhMndOaFJtMXkwd1BIQklFRzBnV203S0d2OHVhNDloS0lad3ZaQVBLQWdLR1ZCWHpxVGNpbHFpR0ZUREJyRVl1UElISlpialRKRG53JTJCSkllSlIlMkZNQzBNZ1N1T0U3NjdGUG5Ldlk1cGJUT2VjN3UlMkJDVVBoMzhZSk1hdXRzWVdScmJzZjhyc2UmWC1BbXotU2lnbmF0dXJlPTQ3N2MzMmJhZmY0NWZhYmFiYjU2YjZkZTk3ODI0ODg5NThhZDU0ZWM4NjEzZWU0MzYwOTU2MDY4OTE4Y2EyODAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JngtaWQ9R2V0T2JqZWN0 HTTP/1.1" 200 98829
+2025-04-05 03:39:11,487 DEBUG:gtts.tts: text: In the sterile quiet of the 'Theological Analysis Chamber,' the artificial intelligence designated 'Veritas' processed millennia of human spiritual data. Its crystalline core pulsed with a soft, internal light, projecting holographic fragments of sacred texts and intricate philosophical frameworks into the air. Veritas wasn't just archiving; it was cross-referencing, analyzing linguistic evolution in prayers, mapping the spread of religious ideas, and seeking abstract patterns within the vast, often contradictory, tapestry of human faith.
+2025-04-05 03:39:11,488 DEBUG:gtts.tts: tld: com
+2025-04-05 03:39:11,488 DEBUG:gtts.tts: lang: en
+2025-04-05 03:39:11,488 DEBUG:gtts.tts: slow: False
+2025-04-05 03:39:11,488 DEBUG:gtts.tts: lang_check: True
+2025-04-05 03:39:11,489 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000002194D5491C0>, <function end_of_line at 0x000002194D549B20>, <function abbreviations at 0x000002194D549080>, <function word_sub at 0x000002194D549BC0>]
+2025-04-05 03:39:11,594 DEBUG:gtts.tts: timeout: None
+2025-04-05 03:39:11,594 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-05 03:39:11,596 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000002194D5491C0>
+2025-04-05 03:39:11,597 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000002194D549B20>
+2025-04-05 03:39:11,597 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000002194D549080>
+2025-04-05 03:39:11,598 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000002194D549BC0>
+2025-04-05 03:39:11,604 DEBUG:gtts.tts: text_parts: ["In the sterile quiet of the 'Theological Analysis Chamber,' the artificial intelligence designated", "'Veritas' processed millennia of human spiritual data", 'Its crystalline core pulsed with a soft', 'internal light', 'projecting holographic fragments of sacred texts and intricate philosophical frameworks into the air', "Veritas wasn't just archiving", 'it was cross-referencing', 'analyzing linguistic evolution in prayers', 'mapping the spread of religious ideas', 'and seeking abstract patterns within the vast', 'often contradictory', 'tapestry of human faith.']
+2025-04-05 03:39:11,605 DEBUG:gtts.tts: text_parts: 12
+2025-04-05 03:39:11,605 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22In%20the%20sterile%20quiet%20of%20the%20%27Theological%20Analysis%20Chamber%2C%27%20the%20artificial%20intelligence%20designated%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,606 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%27Veritas%27%20processed%20millennia%20of%20human%20spiritual%20data%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,606 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Its%20crystalline%20core%20pulsed%20with%20a%20soft%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,607 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22internal%20light%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,607 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22projecting%20holographic%20fragments%20of%20sacred%20texts%20and%20intricate%20philosophical%20frameworks%20into%20the%20air%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,607 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Veritas%20wasn%27t%20just%20archiving%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,608 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22it%20was%20cross-referencing%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,608 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22analyzing%20linguistic%20evolution%20in%20prayers%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,610 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22mapping%20the%20spread%20of%20religious%20ideas%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,610 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20seeking%20abstract%20patterns%20within%20the%20vast%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,610 DEBUG:gtts.tts: data-10: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22often%20contradictory%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,610 DEBUG:gtts.tts: data-11: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22tapestry%20of%20human%20faith.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:11,611 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:12,273 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:12,474 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '258'}
+2025-04-05 03:39:12,475 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:12,475 DEBUG:gtts.tts: status-0: 200
+2025-04-05 03:39:12,478 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:12,478 DEBUG:gtts.tts: part-0 created
+2025-04-05 03:39:12,479 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:12,945 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:13,088 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '199'}
+2025-04-05 03:39:13,089 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:13,089 DEBUG:gtts.tts: status-1: 200
+2025-04-05 03:39:13,090 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:13,090 DEBUG:gtts.tts: part-1 created
+2025-04-05 03:39:13,091 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:13,585 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:13,715 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '181'}
+2025-04-05 03:39:13,715 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:13,715 DEBUG:gtts.tts: status-2: 200
+2025-04-05 03:39:13,716 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:13,716 DEBUG:gtts.tts: part-2 created
+2025-04-05 03:39:13,717 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:14,255 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:14,322 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '146'}
+2025-04-05 03:39:14,323 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:14,324 DEBUG:gtts.tts: status-3: 200
+2025-04-05 03:39:14,324 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:14,324 DEBUG:gtts.tts: part-3 created
+2025-04-05 03:39:14,325 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:14,823 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:15,024 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '254'}
+2025-04-05 03:39:15,025 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:15,025 DEBUG:gtts.tts: status-4: 200
+2025-04-05 03:39:15,027 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:15,027 DEBUG:gtts.tts: part-4 created
+2025-04-05 03:39:15,027 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:15,587 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:15,717 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '167'}
+2025-04-05 03:39:15,717 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:15,718 DEBUG:gtts.tts: status-5: 200
+2025-04-05 03:39:15,718 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:15,719 DEBUG:gtts.tts: part-5 created
+2025-04-05 03:39:15,720 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:16,246 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:16,371 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '158'}
+2025-04-05 03:39:16,371 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:16,372 DEBUG:gtts.tts: status-6: 200
+2025-04-05 03:39:16,372 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:16,372 DEBUG:gtts.tts: part-6 created
+2025-04-05 03:39:16,373 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:16,883 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:17,025 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '179'}
+2025-04-05 03:39:17,026 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:17,027 DEBUG:gtts.tts: status-7: 200
+2025-04-05 03:39:17,028 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:17,028 DEBUG:gtts.tts: part-7 created
+2025-04-05 03:39:17,029 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:17,558 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:17,687 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '177'}
+2025-04-05 03:39:17,688 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:17,688 DEBUG:gtts.tts: status-8: 200
+2025-04-05 03:39:17,689 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:17,689 DEBUG:gtts.tts: part-8 created
+2025-04-05 03:39:17,690 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:18,176 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:18,339 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '187'}
+2025-04-05 03:39:18,340 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:18,340 DEBUG:gtts.tts: status-9: 200
+2025-04-05 03:39:18,341 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:18,341 DEBUG:gtts.tts: part-9 created
+2025-04-05 03:39:18,341 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:18,850 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:18,977 DEBUG:gtts.tts: headers-10: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '151'}
+2025-04-05 03:39:18,977 DEBUG:gtts.tts: url-10: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:18,978 DEBUG:gtts.tts: status-10: 200
+2025-04-05 03:39:18,978 DEBUG:gtts.tts: part-10 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:18,978 DEBUG:gtts.tts: part-10 created
+2025-04-05 03:39:18,979 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:19,500 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:19,630 DEBUG:gtts.tts: headers-11: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '160'}
+2025-04-05 03:39:19,630 DEBUG:gtts.tts: url-11: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:19,631 DEBUG:gtts.tts: status-11: 200
+2025-04-05 03:39:19,631 DEBUG:gtts.tts: part-11 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene0.mp3'>
+2025-04-05 03:39:19,631 DEBUG:gtts.tts: part-11 created
+2025-04-05 03:39:19,632 DEBUG:gtts.tts: Saved to temp\89f5426b-6be3-49ad-beed-c347c52a2fdf\Audio\scene0.mp3
+2025-04-05 03:39:19,634 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "Warm, focused interior scene. A thoughtful, elderly theologian with kind eyes and white hair sits comfortably in a leather armchair, looking intently at a sleek, minimalist interface displaying a calm, shifting nebula of light representing the AI \'Veritas\'. On a nearby transparent screen, the AI displays a complex, interconnected network graph visualizing similarities between different faith traditions\' core tenets. The lighting is soft, intimate, highlighting the interaction between human and machine. Style: realistic, intimate, slightly futuristic, warm tones.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-05 03:39:31,771 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-05 03:39:31,832 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92b554c5ce51d25e-FRA response_code=200
+2025-04-05 03:39:31,835 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-05 03:39:32,380 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/3Ao8rVd14loQwX7i64FjLgn4oIb2OyR2MgsL0bzv9Fo/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzcwMWVmNWEyMTllNmIyYTFlNmE0ZTFlN2MxNjdlODI1MDc5Zjk5MzlkODU4YjhhYjU1ZDE5OTQxZDdlNTA1N2Q_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ1BVNjI1SkpEJTJGMjAyNTA0MDUlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDA1VDAxMzkzMlomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFS3IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpJTUVZQ0lRQ0dWYlVBZWRQRm8wQWVrbDl3SWwzUHAlMkZySmFtZlloRnBCdnZnVzVRTlpwUUloQU9XRExvRTI0YTRGYlFvbjhHeFYxViUyRm51dFhPRGdqcjZoa2UwTiUyRmZwcU15S3BBRkNDTVFBQm9NTlRrNE56STJNVFl6Tnpnd0lneFJHJTJGS3hQS3NObWg5M0tlY3E3UVNySTVsQnd4Yld3T0lWbWdhN1BJd1lseW0yVHZ1WjElMkZIYkdPWkNVJTJGS3l2c21RMjhXY2hwV3klMkJPJTJCMzRwd2lyQ1BNayUyRmxzM3o5b3FFN01QWlRVUWt0Y1BnZHJITkdKWGRGYnBFbDIxZXBTZUI1akVvQTdZTThQJTJGYW1wN2x1ZE9sY25ldTBud1g4NDRkODNtNCUyQjl3a1psN1RLSkElMkZPM29FRkJQT1Q1UVRCOEJ6UE04VzhsMW1sc1k0WWROQ1RNdkNjOWF6RHNWcERQc3dsaXZMUGFhZnIlMkZMdCUyRiUyQmNNSkYzd1olMkZHZUFUUjgyQXlXd0t6MDIwVWhLVzlkZGVrNjhCcmUlMkZUZ2YxJTJCVGQ2aTdycjc0JTJCdXlKbFR5bktiVTJ1b3FSSUVCRDAzVE9kSXVXamVuVlhQdUZmOFpkWDU0ZEFGWThGSkhKRjNDeldOJTJCV1NidWp0bFgzdnpVZmhnbkxaYUtPV1pubDhtTGl5cHExYzN5SGVxMDRoTFlUNjclMkIzYTNCdnZ4eWMyZ0kwakp4UGVKbmFqOUphWDA1Z1RzaktpVGo3NFliUlRPVFh4Q3plJTJGd0JlUSUyRjlFQjQwRmE2aWJwcW1vSW11cWpYUEJKNzdnaVdKdDVOdERkeURQWkdmelBORThBZ0xJNWNmc3olMkZKbzlKYmRtNDJrSmFGMlBnVkw1YThETXZsblBPMlpkYmdxQjRCYVpMM1QlMkJHeVJhSzFmJTJCN0FzVlZOJTJGaTlEemVIRmdTRWJyNGNqNzdZayUyQjVxcnZHT1NLdE5GZEhyTkh0bTVJJTJGZmV2VXozNGlPdDc1ZUZDZk52Sm5YdWhDWkNZbm95NWVrcE9TTmdmSXh4MEVDOGxTUElZTCUyQiUyRjBCSGJBNXQlMkZHR0dpUkwwcUlnOXlOTXZzWllEcHJ5WHdyb0ZIZWk3ZXdmRGd4emU3JTJCb1JTR0tpN1JvVThjNjh3cm9CeHFuMlN6U1BHdjJQakQ5WXMlMkZmQUdHdWZ5OTBncmlxV3VxaWolMkJKaTBSMXhKWWJJJTJCR1R6JTJCbDBDaXRSUWgzZmZ2d1FpJTJCV1FqT29weUtXaWNSbnVoZnhVTG9VcW9YRXZoeG9HRVptWlNSZ1FtS2puJTJGMSUyRmNCZWpBMFF3MUpQQ3Z3WTZtZ0hQR01KMzNmYyUyQjVZNEQyY0x3NG5xWWRzNXlhMG42dVVidllpU0ZpeG41ejZFV01jaSUyQjVxMnNqZ1kycFFYU2ZaWmVlbDljbmwlMkY0WmhrUnB3d1Y2cmljYmpBRjVqM29uaGpPWm1XZndQYXpiWkRjR1dxTGdSRkVkVFpNQk8xY0JtaXFManA5c056VGVlMzRLbGkwQk1SMCUyRklwa2VkeXQlMkI2QkJXZTclMkZNeVVHcTIlMkJrVGpHU28lMkZoeTlBM1lhUVZoY2MwbHFXN0tuN0ZBT041UiZYLUFtei1TaWduYXR1cmU9NDU5ZjNmNGZhNjdlOWJiMWM0NDk5Yjc0OGUzYjNlNzU3NDhkNDBlYjA5MDFkYzMyZDA3MTQ1ZTZmNjQwNWM1OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1HZXRPYmplY3Q HTTP/1.1" 200 104374
+2025-04-05 03:39:32,818 DEBUG:gtts.tts: text: Professor Alistair Finch leaned forward, fascination etched on his face. 'Veritas,' he asked, his voice filled with genuine curiosity, 'having processed virtually every known human expression of faith, can you identify the most persistent, underlying human need that religion seeks to address?' The nebula on the interface swirled gently before Veritas replied in its calm, synthesized voice. 'Professor, analysis indicates the most consistent vectors point towards alleviating existential uncertainty and fostering communal cohesion. The methodologies vary vastly, but the drive to understand one's place and connect with others remains paramount.'
+2025-04-05 03:39:32,819 DEBUG:gtts.tts: tld: com
+2025-04-05 03:39:32,819 DEBUG:gtts.tts: lang: en
+2025-04-05 03:39:32,819 DEBUG:gtts.tts: slow: False
+2025-04-05 03:39:32,820 DEBUG:gtts.tts: lang_check: True
+2025-04-05 03:39:32,820 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000002194D5491C0>, <function end_of_line at 0x000002194D549B20>, <function abbreviations at 0x000002194D549080>, <function word_sub at 0x000002194D549BC0>]
+2025-04-05 03:39:32,824 DEBUG:gtts.tts: timeout: None
+2025-04-05 03:39:32,824 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-05 03:39:32,826 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000002194D5491C0>
+2025-04-05 03:39:32,826 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000002194D549B20>
+2025-04-05 03:39:32,826 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000002194D549080>
+2025-04-05 03:39:32,827 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000002194D549BC0>
+2025-04-05 03:39:32,834 DEBUG:gtts.tts: text_parts: ['Professor Alistair Finch leaned forward', 'fascination etched on his face', "'Veritas,' he asked", 'his voice filled with genuine curiosity', "'having processed virtually every known human expression of faith", 'can you identify the most persistent', 'underlying human need that religion seeks to address?', "' The nebula on the interface swirled gently before Veritas replied in its calm", 'synthesized voice', "'Professor", 'analysis indicates the most consistent vectors point towards alleviating existential uncertainty', 'and fostering communal cohesion', 'The methodologies vary vastly', "but the drive to understand one's place and connect with others remains paramount.'"]
+2025-04-05 03:39:32,835 DEBUG:gtts.tts: text_parts: 14
+2025-04-05 03:39:32,835 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Professor%20Alistair%20Finch%20leaned%20forward%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,836 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22fascination%20etched%20on%20his%20face%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,836 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%27Veritas%2C%27%20he%20asked%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,837 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22his%20voice%20filled%20with%20genuine%20curiosity%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,837 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%27having%20processed%20virtually%20every%20known%20human%20expression%20of%20faith%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,838 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22can%20you%20identify%20the%20most%20persistent%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,838 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22underlying%20human%20need%20that%20religion%20seeks%20to%20address%3F%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,838 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%27%20The%20nebula%20on%20the%20interface%20swirled%20gently%20before%20Veritas%20replied%20in%20its%20calm%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,839 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22synthesized%20voice%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,839 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22%27Professor%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,840 DEBUG:gtts.tts: data-10: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22analysis%20indicates%20the%20most%20consistent%20vectors%20point%20towards%20alleviating%20existential%20uncertainty%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,840 DEBUG:gtts.tts: data-11: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20fostering%20communal%20cohesion%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,840 DEBUG:gtts.tts: data-12: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20methodologies%20vary%20vastly%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,841 DEBUG:gtts.tts: data-13: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22but%20the%20drive%20to%20understand%20one%27s%20place%20and%20connect%20with%20others%20remains%20paramount.%27%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:39:32,842 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:33,384 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:33,518 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '177'}
+2025-04-05 03:39:33,519 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:33,519 DEBUG:gtts.tts: status-0: 200
+2025-04-05 03:39:33,520 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:33,520 DEBUG:gtts.tts: part-0 created
+2025-04-05 03:39:33,521 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:34,059 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:34,187 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '168'}
+2025-04-05 03:39:34,189 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:34,189 DEBUG:gtts.tts: status-1: 200
+2025-04-05 03:39:34,189 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:34,189 DEBUG:gtts.tts: part-1 created
+2025-04-05 03:39:34,190 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:34,695 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:34,826 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '159'}
+2025-04-05 03:39:34,826 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:34,827 DEBUG:gtts.tts: status-2: 200
+2025-04-05 03:39:34,827 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:34,827 DEBUG:gtts.tts: part-2 created
+2025-04-05 03:39:34,828 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:35,332 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:35,466 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '179'}
+2025-04-05 03:39:35,467 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:35,467 DEBUG:gtts.tts: status-3: 200
+2025-04-05 03:39:35,468 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:35,468 DEBUG:gtts.tts: part-3 created
+2025-04-05 03:39:35,469 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:35,951 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:36,137 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '213'}
+2025-04-05 03:39:36,138 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:36,139 DEBUG:gtts.tts: status-4: 200
+2025-04-05 03:39:36,139 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:36,140 DEBUG:gtts.tts: part-4 created
+2025-04-05 03:39:36,140 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:36,626 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:36,769 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '176'}
+2025-04-05 03:39:36,770 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:36,770 DEBUG:gtts.tts: status-5: 200
+2025-04-05 03:39:36,771 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:36,771 DEBUG:gtts.tts: part-5 created
+2025-04-05 03:39:36,772 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:37,238 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:37,374 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '199'}
+2025-04-05 03:39:37,375 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:37,375 DEBUG:gtts.tts: status-6: 200
+2025-04-05 03:39:37,376 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:37,376 DEBUG:gtts.tts: part-6 created
+2025-04-05 03:39:37,377 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:37,886 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:38,075 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '237'}
+2025-04-05 03:39:38,075 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:38,076 DEBUG:gtts.tts: status-7: 200
+2025-04-05 03:39:38,077 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:38,077 DEBUG:gtts.tts: part-7 created
+2025-04-05 03:39:38,078 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:38,661 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:38,786 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '149'}
+2025-04-05 03:39:38,786 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:38,787 DEBUG:gtts.tts: status-8: 200
+2025-04-05 03:39:38,787 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:38,788 DEBUG:gtts.tts: part-8 created
+2025-04-05 03:39:38,788 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:39,263 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:39,328 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '142'}
+2025-04-05 03:39:39,328 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:39,328 DEBUG:gtts.tts: status-9: 200
+2025-04-05 03:39:39,329 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:39,329 DEBUG:gtts.tts: part-9 created
+2025-04-05 03:39:39,329 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:39,849 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:40,049 DEBUG:gtts.tts: headers-10: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '246'}
+2025-04-05 03:39:40,049 DEBUG:gtts.tts: url-10: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:40,050 DEBUG:gtts.tts: status-10: 200
+2025-04-05 03:39:40,051 DEBUG:gtts.tts: part-10 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:40,052 DEBUG:gtts.tts: part-10 created
+2025-04-05 03:39:40,052 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:40,597 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:40,726 DEBUG:gtts.tts: headers-11: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '167'}
+2025-04-05 03:39:40,727 DEBUG:gtts.tts: url-11: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:40,728 DEBUG:gtts.tts: status-11: 200
+2025-04-05 03:39:40,728 DEBUG:gtts.tts: part-11 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:40,729 DEBUG:gtts.tts: part-11 created
+2025-04-05 03:39:40,729 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:41,212 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:41,341 DEBUG:gtts.tts: headers-12: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '165'}
+2025-04-05 03:39:41,342 DEBUG:gtts.tts: url-12: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:41,342 DEBUG:gtts.tts: status-12: 200
+2025-04-05 03:39:41,344 DEBUG:gtts.tts: part-12 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:41,344 DEBUG:gtts.tts: part-12 created
+2025-04-05 03:39:41,345 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:39:41,850 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:39:42,059 DEBUG:gtts.tts: headers-13: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '241'}
+2025-04-05 03:39:42,060 DEBUG:gtts.tts: url-13: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:39:42,060 DEBUG:gtts.tts: status-13: 200
+2025-04-05 03:39:42,061 DEBUG:gtts.tts: part-13 written to <_io.BufferedWriter name='temp\\89f5426b-6be3-49ad-beed-c347c52a2fdf\\Audio\\scene1.mp3'>
+2025-04-05 03:39:42,062 DEBUG:gtts.tts: part-13 created
+2025-04-05 03:39:42,063 DEBUG:gtts.tts: Saved to temp\89f5426b-6be3-49ad-beed-c347c52a2fdf\Audio\scene1.mp3
+2025-04-05 03:39:42,273 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,274 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,274 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,274 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 03:39:42,274 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,274 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 03:39:42,275 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,275 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,275 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,275 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 03:39:42,276 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,276 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 03:39:42,481 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,482 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,482 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,482 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 03:39:42,483 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,483 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 03:39:42,483 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,484 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,484 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 03:39:42,484 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 03:39:42,484 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 03:39:42,484 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 03:39:42,593 ERROR:__main__: Task 89f5426b-6be3-49ad-beed-c347c52a2fdf failed: 'list' object has no attribute 'with_start'
+2025-04-05 03:58:29,702 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\createvideo.py', reloading
+2025-04-05 03:58:30,039 INFO:werkzeug:  * Restarting with stat
+2025-04-05 03:58:33,321 WARNING:werkzeug:  * Debugger is active!
+2025-04-05 03:58:33,325 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-05 03:59:09,107 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:59:09] "[35m[1mPOST /generate_clip HTTP/1.1[0m" 202 -
+2025-04-05 03:59:09,108 DEBUG:__main__: Task cdd8c9ad-5861-41ed-ae46-8c7348633757 started in temp\cdd8c9ad-5861-41ed-ae46-8c7348633757
+2025-04-05 03:59:09,115 DEBUG:openai._base_client: Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'HTTP-Referer': '<YOUR_SITE_URL>', 'X-Title': 'Text 2 Video'}, 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': [{'type': 'text', 'text': '\nYou are a world-class scene generator. Given a topic and a number of scenes, \ngenerate a structured sequence in JSON format. Each scene must include:\n- "image_prompt": A detailed visual description optimized for AI image generation.\n- "text": A vivid narrative description.\n\nExample Output:\n{\n    "scenes": [\n        {\n            "image_prompt": "A beautiful depiction of the first scene.",\n            "text": "This is the first scene.",\n            "summary": "A brief summary of the first scene."\n        }\n    ]\n}\n\nTopic: Exploring the work future with Artificial intelligence\nNumber of Scenes: 2\n'}]}], 'model': 'google/gemini-2.5-pro-exp-03-25:free'}, 'extra_json': {}}
+2025-04-05 03:59:09,178 DEBUG:openai._base_client: Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2025-04-05 03:59:09,180 DEBUG:httpcore.connection: connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-05 03:59:09,268 DEBUG:httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F980354590>
+2025-04-05 03:59:09,269 DEBUG:httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F9E428D150> server_hostname='openrouter.ai' timeout=5.0
+2025-04-05 03:59:09,549 DEBUG:httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F9803AF950>
+2025-04-05 03:59:09,550 DEBUG:httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-04-05 03:59:09,550 DEBUG:httpcore.http11: send_request_headers.complete
+2025-04-05 03:59:09,551 DEBUG:httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-04-05 03:59:09,551 DEBUG:httpcore.http11: send_request_body.complete
+2025-04-05 03:59:09,551 DEBUG:httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-04-05 03:59:09,883 DEBUG:httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Apr 2025 01:59:10 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'x-clerk-auth-message', b'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)'), (b'x-clerk-auth-reason', b'token-invalid'), (b'x-clerk-auth-status', b'signed-out'), (b'Vary', b'Accept-Encoding'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92b571d2e9222c18-FRA'), (b'Content-Encoding', b'gzip')])
+2025-04-05 03:59:09,885 INFO:httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-05 03:59:09,885 DEBUG:httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-04-05 03:59:24,860 DEBUG:httpcore.http11: receive_response_body.complete
+2025-04-05 03:59:24,860 DEBUG:httpcore.http11: response_closed.started
+2025-04-05 03:59:24,860 DEBUG:httpcore.http11: response_closed.complete
+2025-04-05 03:59:24,861 DEBUG:openai._base_client: HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 05 Apr 2025 01:59:10 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'x-clerk-auth-message': 'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)', 'x-clerk-auth-reason': 'token-invalid', 'x-clerk-auth-status': 'signed-out', 'vary': 'Accept-Encoding', 'server': 'cloudflare', 'cf-ray': '92b571d2e9222c18-FRA', 'content-encoding': 'gzip'})
+2025-04-05 03:59:24,863 DEBUG:openai._base_client: request_id: None
+2025-04-05 03:59:24,867 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A bright, futuristic open-plan office. Diverse professionals (architect, data scientist, creative director) collaborate around holographic interfaces displaying complex 3D models and data visualizations. Sleek, minimalist robotic assistants subtly aid tasks. Large windows show a clean, green futuristic cityscape. Warm, optimistic lighting. Photorealistic, high detail, 8K resolution.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-05 03:59:24,868 DEBUG:urllib3.util.retry: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2025-04-05 03:59:24,870 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.xyz:443
+2025-04-05 03:59:41,763 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-05 03:59:41,828 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92b57234d80919a0-FRA response_code=200
+2025-04-05 03:59:41,832 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-05 03:59:42,500 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/QPia6oi0ajLLFj2YkHe_vmch9F1iGTo_MDi6eWpA_Nk/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzg4NmQzOTBjNmE0YmU4M2I3NjMwMTcxODBjY2IwMzRlZjVhZTcyZjY0YmNhYjRjNGEyNTgyYTM1YzBhZDEyOTQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0tVMzZNRVJWJTJGMjAyNTA0MDUlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDA1VDAxNTk0MlomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFS3IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpHTUVRQ0lHeXhxWHFueUdSSVl6TEpSTTkwNmlvdmZ6RlM2byUyRnMwRE1oTUZYaXRLZEJBaUE2YWZxWW45UkJkdHVDJTJGdE1ZaTlnS3VqMzhIZXY5bEZUNjE2ZGxrbXY5eENxUUJRZ2pFQUFhRERVNU9EY3lOakUyTXpjNE1DSU11T01kWngyUnJrSnVGRFI5S3UwRXZzOTRaYVVWQTNVejM5dGJIeXBXZHVjenF0NTd1VTBXbjJJV29zSFhRVjlzZGZ5SDNNWUFmYWdOMnQlMkYlMkJsSiUyRkclMkIxZGxnY0wlMkZoV3N5bWtWNFhaRHFqdDFPbGNVTHY4Q0FCb3FxQzZYOVZzYkp4NERtblRKYXo4RGJoS2ElMkJ2cTV1OTlPSGdrM1k3M2ZNSE9IcGtodzhQOVFMc2JEZWFXRHZVRnYxR244ZFJZTGRNU3JncE1iTkZmRXJxWDVMNGhqcnllWG1PVk0yd1J3VTZwNVpqQ3FpN1k1TU5qMW5kMlRoNUJiSFBnNkRxZTU5M1pOJTJGOW11TEtQSzFTJTJGUmdQcVV0djBzREc3JTJGWEJJaVAxa2RFUEVTelhidTgzeUZZcng4c3g0TWRHenN3JTJGV210d2pIYUdtRWFreUp1QVoyVDI3c000b2V0MzlPTVB3Z1JkZVRFQ0FBdjlGJTJGaiUyQnk3bFZtb3FUanlXNWYwaTBpeGxNaXlvV1NEQjc5UkZpc0I1V3NnQVRzb011a1g4N2JrZjhpZWgyMWUySEttdENCUWkyZCUyQlZTaXF2YXdFUHdzdE0lMkZoMGhlRVY5UzhPeDgyak5TTERoQ3hpNTJabWpmc2ZHa25LJTJGWFMlMkZRU0Q5eDNxZlhtMDMwcDBCdDdHOHVKRGFLUHVtMVpMaGRQOHlzYjgwTDlCZEJ1elNmZnlyMG1oQjd4a2V3ZERhQ1djeVlMQ0JZaFBKdjFGVWdaZHJ2c2FxZU1NWFZPb2pJRUFScWVTQ01RUTFwRVlnUFhuY0hJTlU4T3JmZEpqWGlaSlh1bHZJJTJCeTBVNm9VYjc4YlRoNVljeGlFJTJGd01wZ1hZcG5jQ1FiejBxcnBUNWJpZnFZSUFYR1FoOE9mSkZsQVFpOWpUdzlTTmlkUVM5UWJ4bGNFWk1oYyUyRnRXTU1hbDBEU0hqRG1BeGw1UU9OVDB0NEZ4JTJCWFN5ZWt2SHNwNWhsSTQ4RGtFNmNuYVJLS0RZaWJmMXhYWnZsJTJCMkF5SmdLaW5ZUGlaSDd2VmloU3ZMTTVmZVJsU1RQRWF3ZzN5c24wM1pVNVNBUENMVmwlMkJuYk9FQk9wbGZUZnR4MDV5a3BUeGVJVXJ1MzNWTUk2ZHdyOEdPcHdCYVYzY1dWJTJGSTI0bGVTSmtxTHBKTTZiNldObXBtTWdUWnZuWURLM0xyb296SFpvNDhNTWZRdURNOVcydHV0ck9sJTJGZGRXb1IlMkJvJTJGaFBtTkwxdHVtZ1lpc0ZGS1dDOVAxWWN6RWFxWXZnMlFCeUVzVFRWTjd0MmVrUmFjOHRlSFZ4Q09kWjhLekhQNjEwSnlOODZJekVlSjVmUWpDMzVqZEtjT1RyJTJCZTVadHdTd3hBcFAzbkFIb2ZXRzNmQjRtRlhuZnlvMGFKbGtkalNBVUMlMkJ5UCZYLUFtei1TaWduYXR1cmU9YmVlY2Q5YjA1ZTk0ZmQ0YWM3YWNjZjlhNGE2MmIzYWViZDViN2M0OTc3MjJlMjE0MDVhNWI5NTg4M2EyYjQzMSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1HZXRPYmplY3Q HTTP/1.1" 200 140362
+2025-04-05 03:59:43,014 DEBUG:gtts.tts: text: The 'Synergy Hub' buzzes with quiet energy. It's not the clatter of keyboards but the soft glow of holographic displays and the murmur of human conversation intertwined with AI-generated suggestions. An architect gestures, reshaping a virtual building model mid-air, while an AI instantly calculates structural integrity and energy efficiency. Nearby, a data scientist discusses complex trends with an AI interface that visualizes vast datasets in intuitive, understandable forms. Collaboration is fluid, a partnership where human creativity directs and AI enhances, analyzes, and refines.
+2025-04-05 03:59:43,016 DEBUG:gtts.tts: tld: com
+2025-04-05 03:59:43,016 DEBUG:gtts.tts: lang: en
+2025-04-05 03:59:43,016 DEBUG:gtts.tts: slow: False
+2025-04-05 03:59:43,016 DEBUG:gtts.tts: lang_check: True
+2025-04-05 03:59:43,017 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001F9E1B691C0>, <function end_of_line at 0x000001F9E1B69B20>, <function abbreviations at 0x000001F9E1B69080>, <function word_sub at 0x000001F9E1B69BC0>]
+2025-04-05 03:59:43,117 DEBUG:gtts.tts: timeout: None
+2025-04-05 03:59:43,118 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-05 03:59:43,120 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001F9E1B691C0>
+2025-04-05 03:59:43,121 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001F9E1B69B20>
+2025-04-05 03:59:43,121 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001F9E1B69080>
+2025-04-05 03:59:43,122 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001F9E1B69BC0>
+2025-04-05 03:59:43,130 DEBUG:gtts.tts: text_parts: ["The 'Synergy Hub' buzzes with quiet energy", "It's not the clatter of keyboards but the soft glow of holographic displays and the murmur of human", 'conversation intertwined with AI-generated suggestions', 'An architect gestures', 'reshaping a virtual building model mid-air', 'while an AI instantly calculates structural integrity and energy efficiency', 'Nearby', 'a data scientist discusses complex trends with an AI interface that visualizes vast datasets in', 'intuitive', 'understandable forms Collaboration is fluid', 'a partnership where human creativity directs and AI enhances', 'analyzes', 'and refines.']
+2025-04-05 03:59:43,131 DEBUG:gtts.tts: text_parts: 13
+2025-04-05 03:59:43,132 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20%27Synergy%20Hub%27%20buzzes%20with%20quiet%20energy%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,132 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22It%27s%20not%20the%20clatter%20of%20keyboards%20but%20the%20soft%20glow%20of%20holographic%20displays%20and%20the%20murmur%20of%20human%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,133 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22conversation%20intertwined%20with%20AI-generated%20suggestions%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,134 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22An%20architect%20gestures%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,134 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22reshaping%20a%20virtual%20building%20model%20mid-air%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,135 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22while%20an%20AI%20instantly%20calculates%20structural%20integrity%20and%20energy%20efficiency%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,135 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Nearby%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,136 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22a%20data%20scientist%20discusses%20complex%20trends%20with%20an%20AI%20interface%20that%20visualizes%20vast%20datasets%20in%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,137 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22intuitive%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,138 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22understandable%20forms%20Collaboration%20is%20fluid%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,138 DEBUG:gtts.tts: data-10: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22a%20partnership%20where%20human%20creativity%20directs%20and%20AI%20enhances%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,139 DEBUG:gtts.tts: data-11: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22analyzes%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,140 DEBUG:gtts.tts: data-12: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20refines.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 03:59:43,141 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:43,795 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:43,935 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '188'}
+2025-04-05 03:59:43,936 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:43,936 DEBUG:gtts.tts: status-0: 200
+2025-04-05 03:59:43,938 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:43,938 DEBUG:gtts.tts: part-0 created
+2025-04-05 03:59:43,939 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:44,498 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:44,698 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '265'}
+2025-04-05 03:59:44,699 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:44,699 DEBUG:gtts.tts: status-1: 200
+2025-04-05 03:59:44,701 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:44,702 DEBUG:gtts.tts: part-1 created
+2025-04-05 03:59:44,702 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:45,226 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:45,435 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '192'}
+2025-04-05 03:59:45,436 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:45,438 DEBUG:gtts.tts: status-2: 200
+2025-04-05 03:59:45,439 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:45,440 DEBUG:gtts.tts: part-2 created
+2025-04-05 03:59:45,441 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:45,994 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:46,162 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '155'}
+2025-04-05 03:59:46,163 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:46,164 DEBUG:gtts.tts: status-3: 200
+2025-04-05 03:59:46,164 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:46,165 DEBUG:gtts.tts: part-3 created
+2025-04-05 03:59:46,166 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:46,672 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:46,848 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '182'}
+2025-04-05 03:59:46,849 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:46,850 DEBUG:gtts.tts: status-4: 200
+2025-04-05 03:59:46,851 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:46,851 DEBUG:gtts.tts: part-4 created
+2025-04-05 03:59:46,852 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:47,431 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:47,639 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '223'}
+2025-04-05 03:59:47,641 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:47,641 DEBUG:gtts.tts: status-5: 200
+2025-04-05 03:59:47,643 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:47,643 DEBUG:gtts.tts: part-5 created
+2025-04-05 03:59:47,644 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:48,254 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:48,319 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '136'}
+2025-04-05 03:59:48,320 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:48,321 DEBUG:gtts.tts: status-6: 200
+2025-04-05 03:59:48,321 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:48,322 DEBUG:gtts.tts: part-6 created
+2025-04-05 03:59:48,323 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:48,867 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:49,125 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '253'}
+2025-04-05 03:59:49,126 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:49,126 DEBUG:gtts.tts: status-7: 200
+2025-04-05 03:59:49,129 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:49,130 DEBUG:gtts.tts: part-7 created
+2025-04-05 03:59:49,130 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:49,245 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:59:49] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 03:59:49,615 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:49,681 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '139'}
+2025-04-05 03:59:49,682 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:49,682 DEBUG:gtts.tts: status-8: 200
+2025-04-05 03:59:49,683 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:49,683 DEBUG:gtts.tts: part-8 created
+2025-04-05 03:59:49,684 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:50,193 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:50,329 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '181'}
+2025-04-05 03:59:50,330 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:50,331 DEBUG:gtts.tts: status-9: 200
+2025-04-05 03:59:50,332 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:50,332 DEBUG:gtts.tts: part-9 created
+2025-04-05 03:59:50,333 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:50,888 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:51,140 DEBUG:gtts.tts: headers-10: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '206'}
+2025-04-05 03:59:51,140 DEBUG:gtts.tts: url-10: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:51,141 DEBUG:gtts.tts: status-10: 200
+2025-04-05 03:59:51,143 DEBUG:gtts.tts: part-10 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:51,143 DEBUG:gtts.tts: part-10 created
+2025-04-05 03:59:51,144 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:51,662 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:51,728 DEBUG:gtts.tts: headers-11: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '138'}
+2025-04-05 03:59:51,729 DEBUG:gtts.tts: url-11: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:51,729 DEBUG:gtts.tts: status-11: 200
+2025-04-05 03:59:51,730 DEBUG:gtts.tts: part-11 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:51,730 DEBUG:gtts.tts: part-11 created
+2025-04-05 03:59:51,731 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 03:59:52,285 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:59:52] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 03:59:52,325 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 03:59:52,400 DEBUG:gtts.tts: headers-12: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '144'}
+2025-04-05 03:59:52,401 DEBUG:gtts.tts: url-12: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 03:59:52,401 DEBUG:gtts.tts: status-12: 200
+2025-04-05 03:59:52,402 DEBUG:gtts.tts: part-12 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene0.mp3'>
+2025-04-05 03:59:52,402 DEBUG:gtts.tts: part-12 created
+2025-04-05 03:59:52,404 DEBUG:gtts.tts: Saved to temp\cdd8c9ad-5861-41ed-ae46-8c7348633757\Audio\scene0.mp3
+2025-04-05 03:59:52,405 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A split image. Left: A high-tech, automated warehouse where robotic arms and autonomous drones manage inventory with speed and precision under complex laser grids; no humans visible. Right: A welcoming, modern learning space where adults engage with personalized AI tutors on transparent screens and tablets, learning complex skills like coding, robotics maintenance, and digital art. Focused, aspirational atmosphere. Realistic style, sharp focus.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-05 03:59:53,631 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:59:53] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 03:59:55,583 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 03:59:55] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:06,691 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:06] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:08,507 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:08] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:10,418 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:10] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:12,335 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:12] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:14,187 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:14] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:16,681 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:16] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:18,380 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:18] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:20,793 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:20] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:23,650 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:23] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:25,694 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:25] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:28,138 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:28] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:30,781 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:30] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:33,764 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-05 04:00:33,826 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92b572deddac19a0-FRA response_code=200
+2025-04-05 04:00:33,831 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-05 04:00:34,895 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/lJ6Ey2oo_GDB0MuhwbqLbBJrWW0n0ZxLnVW0woLPIkU/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzhhNDM4NTI3NTQxZDlmMmQ1MGZiNzUyYzU2ZDE2YTg2MDcxZTJhOGU0ZTVhNmQ1YzkxNTY2MDAwODRjZDRiNDc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0ZaSUtGSktBJTJGMjAyNTA0MDUlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDA1VDAyMDAzNFomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFS3IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpITUVVQ0lFQWlUeGpsaDR5JTJGVUdBaFJ1clhvMnV5M0Qxc0o1JTJGYno4SGJKMm5BQU5mekFpRUFwSU5rUzVSbjZqNEpTUkxGS1YlMkJxZWdkTUtGaUdXZ3NWS3pRODRPUUtMeVFxa0FVSUl4QUFHZ3cxT1RnM01qWXhOak0zT0RBaURCdWhwMFA3TmYlMkZQVTNVQTdpcnRCR1ZmNVNxWlZDYXhNM09ueGJCUnlySVpZQiUyQkljUmFZbEFPNTFjcTM0dUpMcWNuVzV3SUtPNVhsZ0dMUFU4d09NeklheVJBcUdNbGN5MFBwb2d0YlVXemNZempOaUVoMmZFa3FXcUdMellDaiUyRmZnQjQ0RG9aOXFhJTJCdktSRVo4NHEyNnBqeXUwNUIwVVMlMkJYbm5NNUFVZEE3eUJWTm1ROUJ1bUN2NzN3JTJCMmVVVEdzZ01yTk80cWxHS1VvU0M4Q2Y2NkIlMkJtMTdVdEw0JTJGdzVlUTJ2NHdpcURjS0FBdVY3WnIxZlc4alU3Mjk3UnpFZTNKJTJGTXFYbyUyRmw0eG1wMDJ1eXpOTUJNTyUyRk1CZnlvQktkN3U4Q0phTTBaMGVlNFB3bExFMlQ0TE5iZ01KOUVTZDBqJTJGVkpKNllyQ24yN2l3TlVRcXZoeCUyQndieThMakdzektPbnlWU1JOTmJNT0w2NUY0UGd1bXdDUllwNEFPJTJGbyUyRkpxSml1ZUE4ZnVRJTJCVDdkbEVuaTBZZmElMkZYVms0ZGFTVmU3VDZTbUNjaEtoRzV0dExiYXRzTXNIU3NubG8lMkZOJTJCQWxLTHRRUkhrWHRPWHYlMkJweU1COTEzYUJsY3JnT1I4SVQzOHRNQVdpSlBCbEw0c01Kc2tPNzRnQ0s1NmlraE1PT3JDWGljaEEyVFdGM1drcGxOcnFUSk5yTmZ6RjNRNGFGUyUyQjFpRkh3QzJ5SWZ3azBlY2VtRTI1VSUyRmdGS01JaHN2UUliUEFldiUyRnAwWlJrZUpGRDg1TkZoTHVhRFJ2TWQ1WHY1TGhuSyUyRmc1TUVrb25hJTJCZkk3dyUyRmNHemclMkZSYm1aR3dCWVFJcGZsaHRpQ2tGWWFRdVZnTk82U3UlMkZDUk1XNGpxeTlXam13VWVaTXFmUTZ3THhaMWVqZ1J3STlhY0tYTTdBc0RKZ05wWkRKNUlhWlBtV0dJb3hUZ1BjY2VHd2lEY0xEd3MxOTVrcjkzOXBxSDB6UGFsNTk2UktIVDFYMEg4bHR3T0VPNkNpUFpBREMyJTJGa1AlMkIlMkZ1UkxIakwwJTJGaXpUR0tRRk5ZQ1B0RmJ2UGhaQ1VsNjdIdEFIeVh1dyUyQk94em8xVHpWYnFpQlhsQmh3OHUlMkZWRERDbmNLJTJGQmpxYkFXcGh3SSUyQmlYJTJGdDI1bjgzcnpUdzQlMkY5T05yYURONU9vWUhmbk5XUFpPam1ZNENSTXBVN2l4NUhFeSUyQjEyJTJCVzNjVzB4VldybjBRNDNvJTJCbmZsZkhTTVpTWkJRQkFFeiUyRnlDTWNmcVZKcU5hR2hrbzd3M2NqY1BaZlZvJTJGMWRHT2wxRGxyYnJLaXFxaGJzbCUyRjl6MVclMkY5Z2tZSSUyQmtaekcxTkJjcDBmNW50S3NtJTJCYUJXUFlkS2dyY0YlMkJsb0NGZFkyNXd0NDdFeVRVUWQwcE5KOFI2NCZYLUFtei1TaWduYXR1cmU9MjYyYzJlZmMyMjllOGJiM2I2YTM2ODIwZTEzOTBlOGM3MjQ1MWZmMjhlYjk3NzEwYmM3MjEwMTRmMWZjZDQ0NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1HZXRPYmplY3Q HTTP/1.1" 200 260176
+2025-04-05 04:00:35,792 DEBUG:gtts.tts: text: While AI handles the intricate dance of logistics and the repetitive strain of mass production in automated facilities, the human workforce pivots. In dedicated 'Upskill Centers' and accessible virtual classrooms, individuals engage with AI tutors tailored to their learning pace. Former factory workers learn to maintain the robots, analysts learn advanced data interpretation, and creatives explore new AI-assisted tools. The focus shifts from manual labor to oversight, strategic thinking, and the uniquely human skills of empathy, complex problem-solving, and innovation.
+2025-04-05 04:00:35,792 DEBUG:gtts.tts: tld: com
+2025-04-05 04:00:35,793 DEBUG:gtts.tts: lang: en
+2025-04-05 04:00:35,793 DEBUG:gtts.tts: slow: False
+2025-04-05 04:00:35,793 DEBUG:gtts.tts: lang_check: True
+2025-04-05 04:00:35,793 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001F9E1B691C0>, <function end_of_line at 0x000001F9E1B69B20>, <function abbreviations at 0x000001F9E1B69080>, <function word_sub at 0x000001F9E1B69BC0>]
+2025-04-05 04:00:35,798 DEBUG:gtts.tts: timeout: None
+2025-04-05 04:00:35,798 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-05 04:00:35,800 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001F9E1B691C0>
+2025-04-05 04:00:35,800 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001F9E1B69B20>
+2025-04-05 04:00:35,801 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001F9E1B69080>
+2025-04-05 04:00:35,801 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001F9E1B69BC0>
+2025-04-05 04:00:35,810 DEBUG:gtts.tts: text_parts: ['While AI handles the intricate dance of logistics and the repetitive strain of mass production in', 'automated facilities', 'the human workforce pivots', "In dedicated 'Upskill Centers' and accessible virtual classrooms", 'individuals engage with AI tutors tailored to their learning pace', 'Former factory workers learn to maintain the robots', 'analysts learn advanced data interpretation', 'and creatives explore new AI-assisted tools', 'The focus shifts from manual labor to oversight', 'strategic thinking', 'and the uniquely human skills of empathy', 'complex problem-solving', 'and innovation.']
+2025-04-05 04:00:35,811 DEBUG:gtts.tts: text_parts: 13
+2025-04-05 04:00:35,811 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22While%20AI%20handles%20the%20intricate%20dance%20of%20logistics%20and%20the%20repetitive%20strain%20of%20mass%20production%20in%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,812 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22automated%20facilities%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,812 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22the%20human%20workforce%20pivots%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,813 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22In%20dedicated%20%27Upskill%20Centers%27%20and%20accessible%20virtual%20classrooms%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,813 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22individuals%20engage%20with%20AI%20tutors%20tailored%20to%20their%20learning%20pace%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,813 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Former%20factory%20workers%20learn%20to%20maintain%20the%20robots%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,814 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22analysts%20learn%20advanced%20data%20interpretation%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,814 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20creatives%20explore%20new%20AI-assisted%20tools%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,815 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20focus%20shifts%20from%20manual%20labor%20to%20oversight%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,815 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22strategic%20thinking%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,815 DEBUG:gtts.tts: data-10: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20the%20uniquely%20human%20skills%20of%20empathy%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,816 DEBUG:gtts.tts: data-11: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22complex%20problem-solving%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,816 DEBUG:gtts.tts: data-12: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20innovation.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-05 04:00:35,817 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:36,404 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:36,603 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '257'}
+2025-04-05 04:00:36,604 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:36,604 DEBUG:gtts.tts: status-0: 200
+2025-04-05 04:00:36,607 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:36,607 DEBUG:gtts.tts: part-0 created
+2025-04-05 04:00:36,607 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:37,125 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:37,253 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '152'}
+2025-04-05 04:00:37,253 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:37,254 DEBUG:gtts.tts: status-1: 200
+2025-04-05 04:00:37,254 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:37,254 DEBUG:gtts.tts: part-1 created
+2025-04-05 04:00:37,255 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:37,760 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:37,893 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '162'}
+2025-04-05 04:00:37,894 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:37,894 DEBUG:gtts.tts: status-2: 200
+2025-04-05 04:00:37,895 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:37,895 DEBUG:gtts.tts: part-2 created
+2025-04-05 04:00:37,895 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:38,408 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:38,604 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '212'}
+2025-04-05 04:00:38,604 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:38,605 DEBUG:gtts.tts: status-3: 200
+2025-04-05 04:00:38,606 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:38,606 DEBUG:gtts.tts: part-3 created
+2025-04-05 04:00:38,606 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:39,132 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:39,330 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '213'}
+2025-04-05 04:00:39,331 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:39,331 DEBUG:gtts.tts: status-4: 200
+2025-04-05 04:00:39,332 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:39,332 DEBUG:gtts.tts: part-4 created
+2025-04-05 04:00:39,333 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:39,867 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:40,000 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '195'}
+2025-04-05 04:00:40,001 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:40,001 DEBUG:gtts.tts: status-5: 200
+2025-04-05 04:00:40,002 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:40,002 DEBUG:gtts.tts: part-5 created
+2025-04-05 04:00:40,003 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:40,488 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:40,668 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '181'}
+2025-04-05 04:00:40,669 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:40,671 DEBUG:gtts.tts: status-6: 200
+2025-04-05 04:00:40,671 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:40,672 DEBUG:gtts.tts: part-6 created
+2025-04-05 04:00:40,673 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:41,270 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:41,405 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '183'}
+2025-04-05 04:00:41,406 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:41,406 DEBUG:gtts.tts: status-7: 200
+2025-04-05 04:00:41,407 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:41,407 DEBUG:gtts.tts: part-7 created
+2025-04-05 04:00:41,408 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:41,927 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:42,061 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '191'}
+2025-04-05 04:00:42,062 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:42,062 DEBUG:gtts.tts: status-8: 200
+2025-04-05 04:00:42,063 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:42,063 DEBUG:gtts.tts: part-8 created
+2025-04-05 04:00:42,064 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:42,544 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:42,674 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '150'}
+2025-04-05 04:00:42,675 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:42,676 DEBUG:gtts.tts: status-9: 200
+2025-04-05 04:00:42,676 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:42,676 DEBUG:gtts.tts: part-9 created
+2025-04-05 04:00:42,677 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:43,161 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:43,294 DEBUG:gtts.tts: headers-10: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '182'}
+2025-04-05 04:00:43,295 DEBUG:gtts.tts: url-10: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:43,295 DEBUG:gtts.tts: status-10: 200
+2025-04-05 04:00:43,296 DEBUG:gtts.tts: part-10 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:43,296 DEBUG:gtts.tts: part-10 created
+2025-04-05 04:00:43,297 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:43,780 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:43,920 DEBUG:gtts.tts: headers-11: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '155'}
+2025-04-05 04:00:43,920 DEBUG:gtts.tts: url-11: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:43,921 DEBUG:gtts.tts: status-11: 200
+2025-04-05 04:00:43,921 DEBUG:gtts.tts: part-11 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:43,921 DEBUG:gtts.tts: part-11 created
+2025-04-05 04:00:43,922 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-05 04:00:44,046 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:44] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:44,446 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-05 04:00:44,514 DEBUG:gtts.tts: headers-12: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '147'}
+2025-04-05 04:00:44,515 DEBUG:gtts.tts: url-12: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-05 04:00:44,515 DEBUG:gtts.tts: status-12: 200
+2025-04-05 04:00:44,516 DEBUG:gtts.tts: part-12 written to <_io.BufferedWriter name='temp\\cdd8c9ad-5861-41ed-ae46-8c7348633757\\Audio\\scene1.mp3'>
+2025-04-05 04:00:44,516 DEBUG:gtts.tts: part-12 created
+2025-04-05 04:00:44,517 DEBUG:gtts.tts: Saved to temp\cdd8c9ad-5861-41ed-ae46-8c7348633757\Audio\scene1.mp3
+2025-04-05 04:00:44,712 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,712 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,712 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,713 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 04:00:44,713 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,713 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 04:00:44,714 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,714 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,714 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,714 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 04:00:44,714 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,716 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 04:00:44,934 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,934 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,935 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,935 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 04:00:44,936 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,936 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 04:00:44,936 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,936 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,937 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-05 04:00:44,937 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-05 04:00:44,937 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-05 04:00:44,937 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-05 04:00:45,717 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:45] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:48,188 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:48] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:00:49,631 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:00:49] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:03:03,844 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:03:03] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:03:15,848 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:03:15] "GET /progress/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-05 04:03:33,160 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:03:33] "[31m[1mPOST /download/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1[0m" 405 -
+2025-04-05 04:05:03,106 ERROR:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:05:03] code 400, message Bad request version ('À\x13À')
+2025-04-05 04:05:03,106 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:05:03] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03z\x9bHó¤\x7fgÀ\x1eç^Eé@Ã\x14Û\x08?>\x18\x0e\x1fF(~@"ølpÌ ^p\x09\x94\x8fuB\x05À \x13?¹ðFDèwÜÍÊZ±\x84TWzP\x1aà\x8c%\x00$\x13\x01\x13\x02\x13\x03À/À+À0À,À'Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-04-05 04:05:11,302 DEBUG:__main__: Successfully deleted temp\cdd8c9ad-5861-41ed-ae46-8c7348633757
+2025-04-05 04:05:11,304 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:05:11] "GET /download/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
