@@ -9224,3 +9224,6 @@
 2025-04-29 00:59:55,807 DEBUG:__main__: Successfully deleted temp\f19d2a97-fa12-483c-8144-9a34380fe027
 2025-04-29 00:59:55,809 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:59:55] "DELETE /delete_temp/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
 2025-04-29 01:11:00,438 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\scenecreator.py', reloading
+2025-04-29 01:11:01,379 INFO:werkzeug:  * Restarting with stat
+2025-04-29 01:11:07,298 WARNING:werkzeug:  * Debugger is active!
+2025-04-29 01:11:07,305 INFO:werkzeug:  * Debugger PIN: 206-020-201
