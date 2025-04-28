@@ -8445,3 +8445,782 @@
 2025-04-05 04:05:03,106 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:05:03] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03z\x9bHó¤\x7fgÀ\x1eç^Eé@Ã\x14Û\x08?>\x18\x0e\x1fF(~@"ølpÌ ^p\x09\x94\x8fuB\x05À \x13?¹ðFDèwÜÍÊZ±\x84TWzP\x1aà\x8c%\x00$\x13\x01\x13\x02\x13\x03À/À+À0À,À'Ì©Ì¨À\x09À\x13À[0m" 400 -
 2025-04-05 04:05:11,302 DEBUG:__main__: Successfully deleted temp\cdd8c9ad-5861-41ed-ae46-8c7348633757
 2025-04-05 04:05:11,304 INFO:werkzeug: 127.0.0.1 - - [05/Apr/2025 04:05:11] "GET /download/cdd8c9ad-5861-41ed-ae46-8c7348633757 HTTP/1.1" 200 -
+2025-04-07 01:16:46,049 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-07 01:16:46,050 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-07 01:16:46,053 INFO:werkzeug:  * Restarting with stat
+2025-04-07 01:16:48,795 WARNING:werkzeug:  * Debugger is active!
+2025-04-07 01:16:48,800 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-12 03:16:38,838 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-12 03:16:38,839 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-12 03:16:38,843 INFO:werkzeug:  * Restarting with stat
+2025-04-12 03:16:41,591 WARNING:werkzeug:  * Debugger is active!
+2025-04-12 03:16:41,594 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-12 03:16:47,566 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:16:47] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-12 03:16:48,222 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:16:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 03:17:23,515 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:17:23] "GET /health HTTP/1.1" 200 -
+2025-04-12 03:19:40,752 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:19:40] "[35m[1mPOST /generate_clip HTTP/1.1[0m" 202 -
+2025-04-12 03:19:40,753 DEBUG:__main__: Task 129ca434-da94-4b4d-8821-10b356df8b6c started in temp\129ca434-da94-4b4d-8821-10b356df8b6c
+2025-04-12 03:19:40,792 DEBUG:__main__: Initial memory usage: {'rss': 101.9375, 'vms': 434.12109375, 'percent': 55.3}
+2025-04-12 03:19:40,803 DEBUG:openai._base_client: Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'HTTP-Referer': '<YOUR_SITE_URL>', 'X-Title': 'Text 2 Video'}, 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': [{'type': 'text', 'text': '\nYou are a world-class scene generator. Given a topic and a number of scenes, \ngenerate a structured sequence in JSON format. Each scene must include:\n- "image_prompt": A detailed visual description optimized for AI image generation.\n- "text": A vivid narrative description.\n\nExample Output:\n{\n    "scenes": [\n        {\n            "image_prompt": "A beautiful depiction of the first scene.",\n            "text": "This is the first scene.",\n            "summary": "A brief summary of the first scene."\n        }\n    ]\n}\n\nTopic: How to make a Fish Soup\nNumber of Scenes: 3\n'}]}], 'model': 'google/gemini-2.5-pro-exp-03-25:free'}, 'extra_json': {}}
+2025-04-12 03:19:40,897 DEBUG:openai._base_client: Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2025-04-12 03:19:40,898 DEBUG:httpcore.connection: connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-12 03:19:41,122 DEBUG:httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D2E2E929C0>
+2025-04-12 03:19:41,123 DEBUG:httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D2CBB1D250> server_hostname='openrouter.ai' timeout=5.0
+2025-04-12 03:19:41,848 DEBUG:httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D2E2E916D0>
+2025-04-12 03:19:41,849 DEBUG:httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-04-12 03:19:41,850 DEBUG:httpcore.http11: send_request_headers.complete
+2025-04-12 03:19:41,850 DEBUG:httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-04-12 03:19:41,851 DEBUG:httpcore.http11: send_request_body.complete
+2025-04-12 03:19:41,852 DEBUG:httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-04-12 03:19:42,310 DEBUG:httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 12 Apr 2025 01:19:42 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'x-clerk-auth-message', b'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)'), (b'x-clerk-auth-reason', b'token-invalid'), (b'x-clerk-auth-status', b'signed-out'), (b'Vary', b'Accept-Encoding'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92eee5a36ec1ef19-LHR'), (b'Content-Encoding', b'gzip')])
+2025-04-12 03:19:42,311 INFO:httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-12 03:19:42,312 DEBUG:httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-04-12 03:19:59,562 DEBUG:httpcore.http11: receive_response_body.complete
+2025-04-12 03:19:59,563 DEBUG:httpcore.http11: response_closed.started
+2025-04-12 03:19:59,563 DEBUG:httpcore.http11: response_closed.complete
+2025-04-12 03:19:59,563 DEBUG:openai._base_client: HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Sat, 12 Apr 2025 01:19:42 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'x-clerk-auth-message': 'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)', 'x-clerk-auth-reason': 'token-invalid', 'x-clerk-auth-status': 'signed-out', 'vary': 'Accept-Encoding', 'server': 'cloudflare', 'cf-ray': '92eee5a36ec1ef19-LHR', 'content-encoding': 'gzip'})
+2025-04-12 03:19:59,563 DEBUG:openai._base_client: request_id: None
+2025-04-12 03:19:59,584 DEBUG:__main__: Memory usage after scene generation: {'rss': 104.23046875, 'vms': 435.06640625, 'percent': 55.3}
+2025-04-12 03:19:59,587 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A rustic wooden kitchen counter bathed in soft, natural light. Fresh ingredients for fish soup are neatly arranged: glistening white fish fillets (like cod or halibut) on a cutting board, colourful chopped mirepoix (onion, carrot, celery) in glass bowls, a head of garlic, sprigs of fresh dill and parsley, a bright lemon, a bottle of olive oil, canned diced tomatoes, and cartons of fish stock. A chef\'s knife lays next to the board. Style: Realistic food photography, warm tones, shallow depth of field.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-12 03:19:59,590 DEBUG:urllib3.util.retry: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2025-04-12 03:19:59,593 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.xyz:443
+2025-04-12 03:20:03,469 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-12 03:20:03,471 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92eee618d8eef4c1-LHR response_code=200
+2025-04-12 03:20:03,474 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-12 03:20:04,908 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/Tpv-tkANKoItN7IgAqN7-_rBhDsLstrA-RipW3wRXtY/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzL2NlMWU0N2FmMGZlYjRiNDBmYThlYmU0MmRlZjcxZjcxMjM4NmE3ZWNhMmUzZTk1ODA3NGFhMzhjMWRkODQwODg_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ01KRlhLQ0taJTJGMjAyNTA0MTIlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDEyVDAxMjAwM1omWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFRklhQ1hWekxYZGxjM1F0TWlKR01FUUNJQTVEVTB3eFdETEF5TTNadHpiZUZxJTJGdlJSJTJCeGJRYjFYUk5aJTJCQVZmS3NEekFpQWFXdTZPd2M1OURXcjEwJTJGTSUyRkNzVTgxRU92aSUyQmMlMkJvJTJGbzFzTkZsRVJFVmdTcVpCUWpLJTJGJTJGJTJGJTJGJTJGJTJGJTJGJTJGJTJGJTJGOEJFQUFhRERVNU9EY3lOakUyTXpjNE1DSU1SSTRBJTJGS3hTSE1IVXIwJTJCRkt1MEU3RGNoM1lXT2hNVGc5QiUyRklyZm9aY1VwUWxvSHVXSEVNb1N6eUdjdWpxQ1RnUFhBYTk0NmJoMW1ITDc3QWhoMkNncmtacU9rU3JoM0p2VHo3VjB1Qlo4MXpDUXhZOElJZTZqT0puZ2xZVlVnJTJCQ0xGeHZqeGNGbURVWWRJYkY4NmRQQzkyOVVnekZjZ0hDJTJCa3djUSUyRnRhQSUyRjlBdElibjB4NURTJTJGaFd1ZW85Q0VNVHNOanM4WmxyNzlGNUlCVVdiY3d2OFFtbGVzZGdFZk1MdWJ0WkFUR0dsUWRSOUg1Vlg5cElJem5uQzd5dzdqQmZ3NlA5M2traTFxWWM0SCUyRndBemp6NzVrYWpvTjRtSHhlRCUyRm9ZbXN3endZemZJUVRQNVdnSjNQa0JDSkglMkZVaHVKck9SeHVydU9mQ3IlMkI3ZXV1UzN2VUYwWThCTlpFYWRmMTZKTzBUR0paUmdidm9zTmdacXZOYnp5T2pmSGUySThhcEFxTWFtQ2FUMGJDUWM2bVZjSDRpVXgzVVlNY0c0cUglMkJuSVBLaG4lMkJKMkRCZDVvbHdZJTJGJTJCbEY1Q1MyeHR5Y2hBSm1odjdGSkVIbEVKWXZ0aGpKbWtXelpNMGtIblhIdFBIZ29LdFBEQW0xRHk5WmlUR2h4b3NpeiUyQlUlMkZtUllTJTJCTGVyZWpTMGVqWCUyQk1ZJTJGZTZ2S0xWdHliT0Rlb1RtQ1VTRTYyVk9ZOGxzMkY0YiUyQnZPekx0Sno0b3pFR2czQ3N3cmdBYUZieEIlMkJiV1g1RHJGNmFSUzB4OWtJTjA0b0w0SkVjYTc3QUVCTlFJY3IlMkJHRWROdlM3NEJvQktpclRyQW51dFIlMkJ0a3Q2aWRIVFI1amFjJTJGN2NvelJRZ2IzaHBPdmglMkJZNmtjV2xzQWpjeGJIVnNJN2ZHUzlGY2NjTk9KWHE1NnhacnVTaHhWUnIlMkI3SEhBJTJGRSUyQnFwYmFHYlpRZjRJV2l5d3pQbXhoMXdlMDF5VkRud01GQ1MzM003eGpLVE1vREJ3VmJnblFiNjJaMGVycUtOVjhqSGhzJTJCV2JVNXVQWDF5MEJMQ2RXeTF4QUVoOTdoQnNzbUZWWlJwSENZMEolMkZDdSUyQlhPTEZ1WnlOUHFESVlQNU1NUCUyRjVyOEdPcHdCS1BUc3U5UGJHTSUyQnBoejBnJTJGbjNwMDdhOXhCTGQxZXdsdFJMWVlJa3JKeUZNcWJpYVlVUWt6WFh1WVBVUkU0U1ZWQVp2d3RhNmlQdG9jTldHa2JTSEN2OEpmJTJGVGEzRDBxMDFpNEUlMkZIa2t1NGMyRlF4QnA0Y2Q2MTU0Qnk0cUZGcmFneTluRzE5MHVHSWt3S3JKZmVCSWdTUUI4SWlLMUs0c2xBVjZLcFQ3ekMlMkYlMkJqNkZNRDZvRjBBazNTOW1EJTJGa3M4Q3NocmRUSE81WjNRb1ZIJlgtQW16LVNpZ25hdHVyZT1kMmY1MmZmYTNmZjI1OTljMGI0YWYwZTI3ZmVhNzk2MzZjNzE2NjExZDU3MzcxZTFlMTU0OTEzMzcyMGRhZjQ5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPUdldE9iamVjdA HTTP/1.1" 200 173134
+2025-04-12 03:20:06,179 DEBUG:__main__: Memory usage after generating image scene0: {'rss': 104.546875, 'vms': 435.7890625, 'percent': 55.5}
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: text: The first step to a delicious fish soup is assembling your cast of characters. On a welcoming wooden surface, gather your fresh ingredients: flaky white fish fillets ready for chopping, a vibrant trio of diced onions, carrots, and celery, pungent garlic, aromatic herbs like dill and parsley, a zesty lemon, golden olive oil, rich tomatoes, and flavorful fish stock. Preparation is key to unlocking the soup's potential.
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: tld: com
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: lang: en
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: slow: False
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: lang_check: True
+2025-04-12 03:20:06,180 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001D2C990D1C0>, <function end_of_line at 0x000001D2C990DB20>, <function abbreviations at 0x000001D2C990D080>, <function word_sub at 0x000001D2C990DBC0>]
+2025-04-12 03:20:06,331 DEBUG:gtts.tts: timeout: None
+2025-04-12 03:20:06,331 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-12 03:20:06,334 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001D2C990D1C0>
+2025-04-12 03:20:06,335 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001D2C990DB20>
+2025-04-12 03:20:06,335 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001D2C990D080>
+2025-04-12 03:20:06,336 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001D2C990DBC0>
+2025-04-12 03:20:06,337 DEBUG:gtts.tts: text_parts: ['The first step to a delicious fish soup is assembling your cast of characters', 'On a welcoming wooden surface', 'gather your fresh ingredients', 'flaky white fish fillets ready for chopping', 'a vibrant trio of diced onions', 'carrots', 'and celery', 'pungent garlic', 'aromatic herbs like dill and parsley', 'a zesty lemon', 'golden olive oil', 'rich tomatoes', 'and flavorful fish stock', "Preparation is key to unlocking the soup's potential."]
+2025-04-12 03:20:06,337 DEBUG:gtts.tts: text_parts: 14
+2025-04-12 03:20:06,345 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20first%20step%20to%20a%20delicious%20fish%20soup%20is%20assembling%20your%20cast%20of%20characters%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,347 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22On%20a%20welcoming%20wooden%20surface%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,347 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22gather%20your%20fresh%20ingredients%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,347 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22flaky%20white%20fish%20fillets%20ready%20for%20chopping%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,347 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22a%20vibrant%20trio%20of%20diced%20onions%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,347 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22carrots%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,349 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20celery%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,349 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22pungent%20garlic%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,350 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22aromatic%20herbs%20like%20dill%20and%20parsley%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,351 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22a%20zesty%20lemon%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,351 DEBUG:gtts.tts: data-10: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22golden%20olive%20oil%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,351 DEBUG:gtts.tts: data-11: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22rich%20tomatoes%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,352 DEBUG:gtts.tts: data-12: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20flavorful%20fish%20stock%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,352 DEBUG:gtts.tts: data-13: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Preparation%20is%20key%20to%20unlocking%20the%20soup%27s%20potential.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:06,354 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:07,539 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:07,876 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '233'}
+2025-04-12 03:20:07,877 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:07,877 DEBUG:gtts.tts: status-0: 200
+2025-04-12 03:20:07,880 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:07,880 DEBUG:gtts.tts: part-0 created
+2025-04-12 03:20:07,882 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:08,960 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:09,316 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '167'}
+2025-04-12 03:20:09,317 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:09,317 DEBUG:gtts.tts: status-1: 200
+2025-04-12 03:20:09,318 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:09,318 DEBUG:gtts.tts: part-1 created
+2025-04-12 03:20:09,319 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:10,302 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:10,495 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '165'}
+2025-04-12 03:20:10,496 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:10,497 DEBUG:gtts.tts: status-2: 200
+2025-04-12 03:20:10,497 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:10,498 DEBUG:gtts.tts: part-2 created
+2025-04-12 03:20:10,499 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:11,492 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:11,795 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '185'}
+2025-04-12 03:20:11,796 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:11,796 DEBUG:gtts.tts: status-3: 200
+2025-04-12 03:20:11,797 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:11,797 DEBUG:gtts.tts: part-3 created
+2025-04-12 03:20:11,798 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:13,020 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:13,328 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '170'}
+2025-04-12 03:20:13,328 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:13,330 DEBUG:gtts.tts: status-4: 200
+2025-04-12 03:20:13,331 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:13,331 DEBUG:gtts.tts: part-4 created
+2025-04-12 03:20:13,333 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:14,180 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:14,377 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '137'}
+2025-04-12 03:20:14,382 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:14,384 DEBUG:gtts.tts: status-5: 200
+2025-04-12 03:20:14,385 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:14,385 DEBUG:gtts.tts: part-5 created
+2025-04-12 03:20:14,386 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:15,352 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:15,545 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '142'}
+2025-04-12 03:20:15,546 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:15,546 DEBUG:gtts.tts: status-6: 200
+2025-04-12 03:20:15,547 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:15,547 DEBUG:gtts.tts: part-6 created
+2025-04-12 03:20:15,549 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:17,274 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:17,594 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '146'}
+2025-04-12 03:20:17,594 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:17,595 DEBUG:gtts.tts: status-7: 200
+2025-04-12 03:20:17,595 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:17,595 DEBUG:gtts.tts: part-7 created
+2025-04-12 03:20:17,596 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:18,768 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:19,035 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '176'}
+2025-04-12 03:20:19,036 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:19,036 DEBUG:gtts.tts: status-8: 200
+2025-04-12 03:20:19,037 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:19,038 DEBUG:gtts.tts: part-8 created
+2025-04-12 03:20:19,039 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:19,983 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:20,122 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '147'}
+2025-04-12 03:20:20,123 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:20,123 DEBUG:gtts.tts: status-9: 200
+2025-04-12 03:20:20,123 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:20,123 DEBUG:gtts.tts: part-9 created
+2025-04-12 03:20:20,123 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:21,198 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:21,335 DEBUG:gtts.tts: headers-10: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '150'}
+2025-04-12 03:20:21,336 DEBUG:gtts.tts: url-10: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:21,336 DEBUG:gtts.tts: status-10: 200
+2025-04-12 03:20:21,336 DEBUG:gtts.tts: part-10 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:21,337 DEBUG:gtts.tts: part-10 created
+2025-04-12 03:20:21,337 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:22,199 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:22,365 DEBUG:gtts.tts: headers-11: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '145'}
+2025-04-12 03:20:22,365 DEBUG:gtts.tts: url-11: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:22,366 DEBUG:gtts.tts: status-11: 200
+2025-04-12 03:20:22,367 DEBUG:gtts.tts: part-11 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:22,367 DEBUG:gtts.tts: part-11 created
+2025-04-12 03:20:22,367 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:23,895 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:24,876 DEBUG:gtts.tts: headers-12: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '160'}
+2025-04-12 03:20:24,876 DEBUG:gtts.tts: url-12: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:24,876 DEBUG:gtts.tts: status-12: 200
+2025-04-12 03:20:24,877 DEBUG:gtts.tts: part-12 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:24,877 DEBUG:gtts.tts: part-12 created
+2025-04-12 03:20:24,878 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:25,933 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:26,286 DEBUG:gtts.tts: headers-13: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '199'}
+2025-04-12 03:20:26,304 DEBUG:gtts.tts: url-13: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:26,306 DEBUG:gtts.tts: status-13: 200
+2025-04-12 03:20:26,315 DEBUG:gtts.tts: part-13 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene0.mp3'>
+2025-04-12 03:20:26,318 DEBUG:gtts.tts: part-13 created
+2025-04-12 03:20:26,321 DEBUG:gtts.tts: Saved to temp\129ca434-da94-4b4d-8821-10b356df8b6c\Audio\scene0.mp3
+2025-04-12 03:20:26,344 DEBUG:__main__: Memory usage after generating audio scene0: {'rss': 105.9375, 'vms': 436.25, 'percent': 55.4}
+2025-04-12 03:20:26,347 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "Medium shot focusing on a heavy-bottomed pot or Dutch oven on a lit stovetop burner. The chopped mirepoix (onions, carrots, celery) and minced garlic are visibly sizzling and softening in shimmering olive oil within the pot. Gentle steam rises. In the near background, the opened can of tomatoes and carton of fish stock are visible, ready to be poured in. Style: Realistic action cooking shot, warm lighting, slightly steamy atmosphere.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-12 03:20:29,924 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-12 03:20:30,062 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92eee6b99c50f4c1-LHR response_code=200
+2025-04-12 03:20:30,067 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-12 03:20:31,434 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/rcu8cUJCAL39RnURJ1CyRd0pHPXxjOrOH_s-HZui9pw/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzQyYzI1Njc3MmViYjhiNjQzZjBlY2RiNmZjMTA4Mjc0ZWRlMjUyM2FiYmE5ZmRjZDNkM2QzNzVkMDNkYTFlN2Y_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0RUVVVVRzJBJTJGMjAyNTA0MTIlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDEyVDAxMjAzMFomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFRklhQ1hWekxYZGxjM1F0TWlKSE1FVUNJQ3FWdjVTNzc3T3p2QmplRzB2a09KOG05QWk3VU1Bc2pMJTJCakslMkZNa2ppb1NBaUVBcmd6YzNxWU4lMkZ4WVRKUXVnQmtEJTJCWHl2RXhyMWVZclFNeiUyRnpKT0g0Y1ZESXFtUVVJeXYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZBUkFBR2d3MU9UZzNNall4TmpNM09EQWlEQTJLc1dkWGVEbEYwcFp1VUNydEJDeWZ4VkgxQ0hNVnBPaHpXbWtNZEo2cmo2Rk95WkF1WVhIdUElMkZCJTJCeGZ4RiUyRm9IUVdxa2Y0UFJmb1BYd2hIRWZQcWdQSGdidUt5R0pQWjRiTm1jS2liUm5oQW0lMkJubCUyQnVJMFBMU0hvZGVtWGlGOCUyRmNEY3lhZjlEVXYxeTc5aFpzV2QxSjN3S1YyWUVqTFZkSmpMVWFxQXR0ZE1kTjRtYWR6S3d1SHI0Ukk5WWVkcFlyNENRY01NTXkwMU5JVkFHeEZORyUyRmExJTJGdzZKRFNlJTJCYUVCZ3MyUFhCMEwzbnVWZVdPS2tYQnlOczlLYnNGbHRwZk8lMkJNNXZmUkhESlRBUUhXWGRRMVpSWnJSZEs2WnZuJTJCeUtiU1NyQThscXJ4ZjdWMUlnNlNzWndaVWJJQmJ2SnhQc0hYRjhlWklLSU0wV0YzbGRoNGNRdVJKY3NINlE3M05ENTVOU1FNeE1KUEdNR2lwN21tRXRYd2xMaVRFSGRPb2JsVlBmcHVUblFJanJnT0cwQmtSOWklMkZxaHhtJTJCUXVvQkFvVDhWNjhJJTJCWWNiJTJCRUJmbUgwOHNXa2dZc1ZvVjFuTWViRmhsYjlGdDIwUGZDMWVQalFpOHV2R1N1WEcwSE1sbHNlbEM1Qm8xWmtEbG5GVjFHMHQ2VlgwWU15JTJGS0gyT21DQUdGVk9jU2l4eUpnM0ExNkF3UGsxMWdKMmRXazNLVjBQRFM0ektDWVNZa1NmTzJtQmpyaEVacWJuQmlxdDVsbUFhcEh0a2JZRHVrdU5DRUxub1g1UG5tWXN2MWJNTk5SM0dnYyUyQmdJTUtKQ3VlWGRRSWYlMkI0b2lDOWo0JTJGOGxwcjJCZ0YlMkZSJTJCQXRoczRzZnl0TU53RGN6TGZ3eXkxVVYxVnVzdmVraG5NZzBEOGFTOU5PdERkbHJGMVptRlRYZGIwMHEzZ2tDVTcwQTl2S3JpU1pWdVMlMkI5cGM4dzROZlNvMmNXeWpRVDU2V0V4ciUyQlBGTDElMkZlSkwzc3VUbmJqeUd3bUtOQVFweXljMUc3WkxXcVVVUyUyQkl3SjY4TDZ6VXJzdVVhQ3lBeDlNY0slMkJaRjQ3NnhFaFgxOU9IZVVWSVNudk12ZDdGclFCTWM5N3d2ekRkJTJGJTJCYSUyRkJqcWJBUk5LeHRaNVZKOGJ4d01SZTduR0wxMUhXcWFtQXlaZndKeUFlVHFtVWdZMUx4bnFUYUMlMkZ1b3RIa0pPWVolMkJ3RmRMRGcwb1lEb0slMkJkNEhwa1c3WWNIVFlhd3lLZG02ejE4YVFza3N4SXVDemlZYWFCMG15VVZSU3ExT0dsVkZqUHlhVXpVJTJCQkUwYllFVzJLZ1djTXdleDZTJTJGNDIyZUNrS3dLM1d2bGlxJTJCMmpUWHJwMDdsbTBlQWZ1VzVZZVFUU1RwUEpVYmF0UEpybnBkZlhlJlgtQW16LVNpZ25hdHVyZT1lZDBkMjMwMzZiM2JhNDc5YWRmMzJjY2FjODgwNjI5ZDAyOWQ1YmE2MzVjNzhlOTI5ZTI0ZWJkOGNjODViNjJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPUdldE9iamVjdA HTTP/1.1" 200 107989
+2025-04-12 03:20:32,298 DEBUG:__main__: Memory usage after generating image scene1: {'rss': 105.671875, 'vms': 435.91015625, 'percent': 55.4}
+2025-04-12 03:20:32,298 DEBUG:gtts.tts: text: Now, the foundation of flavor begins. Heat olive oil in a sturdy pot until it shimmers. Add the chopped onions, carrots, and celery, sautéing until they soften and become fragrant, releasing their natural sweetness. Stir in the minced garlic for the last minute until its powerful aroma blooms. This aromatic base is crucial before adding the liquids.
+2025-04-12 03:20:32,299 DEBUG:gtts.tts: tld: com
+2025-04-12 03:20:32,299 DEBUG:gtts.tts: lang: en
+2025-04-12 03:20:32,300 DEBUG:gtts.tts: slow: False
+2025-04-12 03:20:32,300 DEBUG:gtts.tts: lang_check: True
+2025-04-12 03:20:32,300 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001D2C990D1C0>, <function end_of_line at 0x000001D2C990DB20>, <function abbreviations at 0x000001D2C990D080>, <function word_sub at 0x000001D2C990DBC0>]
+2025-04-12 03:20:32,304 DEBUG:gtts.tts: timeout: None
+2025-04-12 03:20:32,304 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-12 03:20:32,309 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001D2C990D1C0>
+2025-04-12 03:20:32,310 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001D2C990DB20>
+2025-04-12 03:20:32,310 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001D2C990D080>
+2025-04-12 03:20:32,311 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001D2C990DBC0>
+2025-04-12 03:20:32,319 DEBUG:gtts.tts: text_parts: ['Now', 'the foundation of flavor begins', 'Heat olive oil in a sturdy pot until it shimmers', 'Add the chopped onions', 'carrots', 'and celery', 'sautéing until they soften and become fragrant', 'releasing their natural sweetness', 'Stir in the minced garlic for the last minute until its powerful aroma blooms This aromatic base is', 'crucial before adding the liquids.']
+2025-04-12 03:20:32,320 DEBUG:gtts.tts: text_parts: 10
+2025-04-12 03:20:32,321 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Now%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,322 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22the%20foundation%20of%20flavor%20begins%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,323 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Heat%20olive%20oil%20in%20a%20sturdy%20pot%20until%20it%20shimmers%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,323 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Add%20the%20chopped%20onions%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,324 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22carrots%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,324 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22and%20celery%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,325 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22saut%5C%5Cu00e9ing%20until%20they%20soften%20and%20become%20fragrant%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,325 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22releasing%20their%20natural%20sweetness%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,326 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Stir%20in%20the%20minced%20garlic%20for%20the%20last%20minute%20until%20its%20powerful%20aroma%20blooms%20This%20aromatic%20base%20is%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,326 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22crucial%20before%20adding%20the%20liquids.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:20:32,326 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:33,316 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:33,480 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '133'}
+2025-04-12 03:20:33,481 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:33,481 DEBUG:gtts.tts: status-0: 200
+2025-04-12 03:20:33,482 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:33,482 DEBUG:gtts.tts: part-0 created
+2025-04-12 03:20:33,483 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:34,469 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:34,781 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '169'}
+2025-04-12 03:20:34,782 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:34,782 DEBUG:gtts.tts: status-1: 200
+2025-04-12 03:20:34,784 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:34,784 DEBUG:gtts.tts: part-1 created
+2025-04-12 03:20:34,785 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:35,554 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:35,826 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '196'}
+2025-04-12 03:20:35,827 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:35,827 DEBUG:gtts.tts: status-2: 200
+2025-04-12 03:20:35,827 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:35,827 DEBUG:gtts.tts: part-2 created
+2025-04-12 03:20:35,827 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:36,655 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:36,841 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '158'}
+2025-04-12 03:20:36,841 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:36,842 DEBUG:gtts.tts: status-3: 200
+2025-04-12 03:20:36,842 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:36,842 DEBUG:gtts.tts: part-3 created
+2025-04-12 03:20:36,842 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:38,523 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:38,668 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '137'}
+2025-04-12 03:20:38,669 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:38,669 DEBUG:gtts.tts: status-4: 200
+2025-04-12 03:20:38,670 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:38,670 DEBUG:gtts.tts: part-4 created
+2025-04-12 03:20:38,671 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:39,515 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:39,693 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '142'}
+2025-04-12 03:20:39,694 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:39,695 DEBUG:gtts.tts: status-5: 200
+2025-04-12 03:20:39,695 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:39,696 DEBUG:gtts.tts: part-5 created
+2025-04-12 03:20:39,696 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:40,589 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:40,954 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '198'}
+2025-04-12 03:20:40,954 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:40,954 DEBUG:gtts.tts: status-6: 200
+2025-04-12 03:20:40,954 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:40,954 DEBUG:gtts.tts: part-6 created
+2025-04-12 03:20:40,954 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:41,887 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:42,303 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '169'}
+2025-04-12 03:20:42,304 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:42,304 DEBUG:gtts.tts: status-7: 200
+2025-04-12 03:20:42,305 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:42,305 DEBUG:gtts.tts: part-7 created
+2025-04-12 03:20:42,306 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:43,397 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:20:43] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:20:46,216 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:46,678 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:20:46] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:20:47,441 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '263'}
+2025-04-12 03:20:47,442 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:47,442 DEBUG:gtts.tts: status-8: 200
+2025-04-12 03:20:47,442 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:47,442 DEBUG:gtts.tts: part-8 created
+2025-04-12 03:20:47,442 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:20:48,475 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:20:48,747 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '172'}
+2025-04-12 03:20:48,748 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:20:48,748 DEBUG:gtts.tts: status-9: 200
+2025-04-12 03:20:48,749 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene1.mp3'>
+2025-04-12 03:20:48,749 DEBUG:gtts.tts: part-9 created
+2025-04-12 03:20:48,751 DEBUG:gtts.tts: Saved to temp\129ca434-da94-4b4d-8821-10b356df8b6c\Audio\scene1.mp3
+2025-04-12 03:20:48,773 DEBUG:__main__: Memory usage after generating audio scene1: {'rss': 106.20703125, 'vms': 436.5390625, 'percent': 55.6}
+2025-04-12 03:20:48,774 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-10-10.0.19045-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 10 10.0.19045 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "Overhead close-up shot of the simmering fish soup in the pot. Tender, opaque chunks of white fish float amongst the colourful vegetables in a rich, slightly orange-tinted broth. Finely chopped fresh dill and parsley are being generously sprinkled over the surface. A wooden spoon gently stirs the contents. Appetizing steam curls upwards. Style: Vibrant food photography, top-down view, focus on texture and color.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-12 03:20:48,993 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:20:48] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:20:50,686 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:20:50] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:12,144 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:12] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:23,529 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:23] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:23,943 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-12 03:21:24,113 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=92eee745c817f4c1-LHR response_code=200
+2025-04-12 03:21:24,117 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-12 03:21:25,283 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/zRkE3hEVsYOETDLstTUosgGxZb9MLVybSiPrSlaDrzU/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzFjNzYzN2I3ZjZlZmY1ZTE0ODA1MDRmOTVlNjJjNTU1OWMwNTUyY2E1OGFhZTdlOGQ3OTA1NGZjMzFmMDNlNWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0NEN1hGU1dPJTJGMjAyNTA0MTIlMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDEyVDAxMjEyNFomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFRklhQ1hWekxYZGxjM1F0TWlKSE1FVUNJUUNZd2NKV3RVbTRIVlNhWjVXUG4lMkI1WG9RVzZBeVR2WSUyRnd1UnJvOWxwTDZEd0lnVDhydHg1UkE3bEZiOFZDS2kyczh2JTJCRDh3dGVLemNhMEhqQUVpM0lmR2ZJcW1RVUl5diUyRiUyRiUyRiUyRiUyRiUyRiUyRiUyRiUyRiUyRkFSQUFHZ3cxT1RnM01qWXhOak0zT0RBaURDQng5bWNSdEJvdmQ5VGdQeXJ0Qk05VzJoJTJGalZzcXN5NUU4T0QzM0xGZldIJTJCSk9hdUNZTmVuWDdzNVdUMXRHREF0Z1QxRDk5Y3UxdkJCOEYlMkJ6UiUyQmRxVlptVGh4UTF2dCUyQjZ1JTJGOVF5eENQZUxtc3VLQm5obEI3ZGZ5djZkZ0s0WjlJS1dwR0dIdE9od0VZY1VOQWZseEUxSzhnZFFGM2tRWWoyQVJnWTMxSTAxZ1pPTEpMWEVzak8waWdxMkhzQnN0Z2dlRUpXeDglMkZmdVB6M0FTb0VsYUVlWTRoTzg4azhMNnV5dXRqVUhWZ1JuS3FPbVNYcVNySllMQWRBbG8lMkZIbWpOd2NmcjkxQUpFUXpjaHI4N29LRGpqU1hFWm5tTEt5Rm1WcyUyQkc2SWdGRDklMkZBdEtpalVGdGhQZ3g3VENoYW1CTThmRnlBQnl4d1dyczhSR2U4JTJCcTZHdkRKMXkydFNDTjhRVEVRMiUyRnMlMkZFVHdyMnVFMlF4WiUyRmpJZmxBa3BlcyUyRmVBM3hRbkVxbncwYVhWQmNzY1pEUXJwaE4xRWlodjMlMkJOdnJ1Z2prMFhoZjdVSml6dnU1dG14S0haOFZhZ0hHQzYlMkJndEV0bHVJQVMweXVuaDdTaHVuRlo1V3ptMCUyQm9TOHU1dCUyRjJVenUlMkZSZlU0Y1drZnFuN2FaVHIwa0JlbWxRdHh5dFlEUE96TkdRbyUyRiUyQkpHSFN1WGNCaXRtcGhhNjc5T2IxSkJ1azcyUWklMkZFeE5vMXpuREk2cFpKYzFlR1BwNkslMkJ2WW12S3JSVzFLbm80UmxHWTVveGxtcHIxOWlLWmhDMXNPZ3lBbXRhVTNTT2ViYkFPT2txR2UzcHpvMWVBM2NnTWtLbW9CSUxpSTN1SkdmWExlaSUyRmNYc3J0VkF3NnFVYkVLTGt3QXQ3Yk1LYVIxU0tpR3UxUzAxb244d2YlMkJvbCUyRlJVa2tJYjlTSUJKbG4wJTJCOWdsa1hiYllXODlrNW5pMDN4Sm50cWRWelNOam1DdlQlMkZOOXFzZUJVU2JZUlFkQTdqMGg3MzVsUEdYVTVJek0yTzZ0RXo1MnZTY0oxY0NmWUZ0VFhTcXdMZHE5RVlUNTFaeiUyQnRrV2ttUTRTNFpya0YwcGMxY0tvTE5PQzRodTJHMkRDVWdPZSUyRkJqcWJBU05Ud29KdiUyQkolMkZUTDRsMzRybWhuUVVxZWx6NjZPb1VUd3ZCc2tQREIzbXU1QXZjakxYZ2ZyaGRFcEthb1RHcEwxVjdPMzBBMzluUFlqUTJlUG1SJTJGcXhGN3Rmckc3dGtBRHNFbUtjNmtyMXM0OG5OMVJRUjZHMU5tdDE1S0hKVUFJRzEweTdCT1BOb2poaW9Sc0F1ek5WJTJCVm1DUVZsdXFyWU52OURKVUNjUWNZTUFhV2tHS2s2OHI1JTJGTnZYOE16QTZQaW94TG1DRyUyQnp4aW43JlgtQW16LVNpZ25hdHVyZT0xOTdlZjA5MzY5N2RhMTNiZmM2MzU2OWJiYTdiNWUxZDhiNWE2OGJhZDMzMThkNWRmOTcwYTRhMGMzMjhmNjBlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPUdldE9iamVjdA HTTP/1.1" 200 139364
+2025-04-12 03:21:26,389 DEBUG:__main__: Memory usage after generating image scene2: {'rss': 106.2109375, 'vms': 436.5078125, 'percent': 55.4}
+2025-04-12 03:21:26,390 DEBUG:gtts.tts: text: With the aromatic base ready, pour in the diced tomatoes and fish stock, bringing the mixture to a gentle simmer. Carefully slide the pieces of fish into the bubbling broth. Cook for just a few minutes until the fish is opaque and flakes easily. Avoid overcooking! Finish the soup by stirring in a generous handful of fresh chopped dill and parsley, adding a final burst of vibrant flavor and color. Serve hot, perhaps with a squeeze of lemon.
+2025-04-12 03:21:26,391 DEBUG:gtts.tts: tld: com
+2025-04-12 03:21:26,391 DEBUG:gtts.tts: lang: en
+2025-04-12 03:21:26,391 DEBUG:gtts.tts: slow: False
+2025-04-12 03:21:26,392 DEBUG:gtts.tts: lang_check: True
+2025-04-12 03:21:26,392 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001D2C990D1C0>, <function end_of_line at 0x000001D2C990DB20>, <function abbreviations at 0x000001D2C990D080>, <function word_sub at 0x000001D2C990DBC0>]
+2025-04-12 03:21:26,397 DEBUG:gtts.tts: timeout: None
+2025-04-12 03:21:26,397 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-12 03:21:26,400 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001D2C990D1C0>
+2025-04-12 03:21:26,400 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001D2C990DB20>
+2025-04-12 03:21:26,401 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001D2C990D080>
+2025-04-12 03:21:26,402 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001D2C990DBC0>
+2025-04-12 03:21:26,408 DEBUG:gtts.tts: text_parts: ['With the aromatic base ready', 'pour in the diced tomatoes and fish stock', 'bringing the mixture to a gentle simmer', 'Carefully slide the pieces of fish into the bubbling broth', 'Cook for just a few minutes until the fish is opaque and flakes easily', 'Avoid overcooking!', 'Finish the soup by stirring in a generous handful of fresh chopped dill and parsley', 'adding a final burst of vibrant flavor and color', 'Serve hot', 'perhaps with a squeeze of lemon.']
+2025-04-12 03:21:26,408 DEBUG:gtts.tts: text_parts: 10
+2025-04-12 03:21:26,409 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22With%20the%20aromatic%20base%20ready%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,409 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22pour%20in%20the%20diced%20tomatoes%20and%20fish%20stock%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,410 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22bringing%20the%20mixture%20to%20a%20gentle%20simmer%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,411 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Carefully%20slide%20the%20pieces%20of%20fish%20into%20the%20bubbling%20broth%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,412 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Cook%20for%20just%20a%20few%20minutes%20until%20the%20fish%20is%20opaque%20and%20flakes%20easily%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,413 DEBUG:gtts.tts: data-5: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Avoid%20overcooking%21%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,414 DEBUG:gtts.tts: data-6: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Finish%20the%20soup%20by%20stirring%20in%20a%20generous%20handful%20of%20fresh%20chopped%20dill%20and%20parsley%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,414 DEBUG:gtts.tts: data-7: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22adding%20a%20final%20burst%20of%20vibrant%20flavor%20and%20color%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,415 DEBUG:gtts.tts: data-8: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Serve%20hot%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,416 DEBUG:gtts.tts: data-9: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22perhaps%20with%20a%20squeeze%20of%20lemon.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-12 03:21:26,417 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:27,450 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:27,627 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '166'}
+2025-04-12 03:21:27,627 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:27,628 DEBUG:gtts.tts: status-0: 200
+2025-04-12 03:21:27,629 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:27,629 DEBUG:gtts.tts: part-0 created
+2025-04-12 03:21:27,631 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:28,654 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:28,972 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '185'}
+2025-04-12 03:21:28,973 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:28,973 DEBUG:gtts.tts: status-1: 200
+2025-04-12 03:21:28,974 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:28,975 DEBUG:gtts.tts: part-1 created
+2025-04-12 03:21:28,976 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:30,463 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:30,541 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:30] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:30,750 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '181'}
+2025-04-12 03:21:30,759 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:30,760 DEBUG:gtts.tts: status-2: 200
+2025-04-12 03:21:30,761 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:30,761 DEBUG:gtts.tts: part-2 created
+2025-04-12 03:21:30,762 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:31,815 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:32,092 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '206'}
+2025-04-12 03:21:32,092 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:32,093 DEBUG:gtts.tts: status-3: 200
+2025-04-12 03:21:32,093 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:32,094 DEBUG:gtts.tts: part-3 created
+2025-04-12 03:21:32,095 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:32,923 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:33,252 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '226'}
+2025-04-12 03:21:33,255 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:33,255 DEBUG:gtts.tts: status-4: 200
+2025-04-12 03:21:33,255 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:33,255 DEBUG:gtts.tts: part-4 created
+2025-04-12 03:21:33,255 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:34,063 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:34,204 DEBUG:gtts.tts: headers-5: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '152'}
+2025-04-12 03:21:34,204 DEBUG:gtts.tts: url-5: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:34,204 DEBUG:gtts.tts: status-5: 200
+2025-04-12 03:21:34,204 DEBUG:gtts.tts: part-5 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:34,204 DEBUG:gtts.tts: part-5 created
+2025-04-12 03:21:34,204 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:35,157 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:37,116 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:37] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:37,402 DEBUG:gtts.tts: headers-6: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '241'}
+2025-04-12 03:21:37,402 DEBUG:gtts.tts: url-6: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:37,402 DEBUG:gtts.tts: status-6: 200
+2025-04-12 03:21:37,402 DEBUG:gtts.tts: part-6 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:37,402 DEBUG:gtts.tts: part-6 created
+2025-04-12 03:21:37,402 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:38,659 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:38,809 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:38] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:38,935 DEBUG:gtts.tts: headers-7: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '194'}
+2025-04-12 03:21:38,935 DEBUG:gtts.tts: url-7: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:38,936 DEBUG:gtts.tts: status-7: 200
+2025-04-12 03:21:38,938 DEBUG:gtts.tts: part-7 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:38,938 DEBUG:gtts.tts: part-7 created
+2025-04-12 03:21:38,938 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:39,827 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:40,016 DEBUG:gtts.tts: headers-8: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '141'}
+2025-04-12 03:21:40,016 DEBUG:gtts.tts: url-8: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:40,017 DEBUG:gtts.tts: status-8: 200
+2025-04-12 03:21:40,017 DEBUG:gtts.tts: part-8 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:40,017 DEBUG:gtts.tts: part-8 created
+2025-04-12 03:21:40,017 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-12 03:21:40,605 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:40] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:41,350 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-12 03:21:42,265 DEBUG:gtts.tts: headers-9: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '172'}
+2025-04-12 03:21:42,277 DEBUG:gtts.tts: url-9: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-12 03:21:42,279 DEBUG:gtts.tts: status-9: 200
+2025-04-12 03:21:42,280 DEBUG:gtts.tts: part-9 written to <_io.BufferedWriter name='temp\\129ca434-da94-4b4d-8821-10b356df8b6c\\Audio\\scene2.mp3'>
+2025-04-12 03:21:42,281 DEBUG:gtts.tts: part-9 created
+2025-04-12 03:21:42,284 DEBUG:gtts.tts: Saved to temp\129ca434-da94-4b4d-8821-10b356df8b6c\Audio\scene2.mp3
+2025-04-12 03:21:42,308 DEBUG:__main__: Memory usage after generating audio scene2: {'rss': 106.40625, 'vms': 437.67578125, 'percent': 55.6}
+2025-04-12 03:21:42,351 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:42] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:42,699 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:42,705 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,066 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:43,426 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,430 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,430 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,431 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:43,431 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,432 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:43,432 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,433 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,433 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-12 03:21:43,433 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-12 03:21:43,434 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-12 03:21:43,434 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-12 03:21:45,099 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:21:45] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:23:22,381 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:23:22] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:23:31,564 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:23:31] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:23:33,266 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:23:33] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:24:14,697 DEBUG:__main__: Memory usage after video creation: {'rss': 117.24609375, 'vms': 448.296875, 'percent': 54.1}
+2025-04-12 03:24:26,030 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:24:26] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:24:28,145 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:24:28] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:24:35,527 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:24:35] "GET /progress/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:24:42,875 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:24:42] "GET /memory HTTP/1.1" 200 -
+2025-04-12 03:26:21,075 DEBUG:__main__: Successfully deleted temp\129ca434-da94-4b4d-8821-10b356df8b6c
+2025-04-12 03:26:21,077 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:26:21] "GET /download/129ca434-da94-4b4d-8821-10b356df8b6c HTTP/1.1" 200 -
+2025-04-12 03:39:00,662 INFO:werkzeug: 127.0.0.1 - - [12/Apr/2025 03:39:00] "[33mGET /progress/064c4adc-66da-41cc-b458-6c0f90efbd66 HTTP/1.1[0m" 404 -
+2025-04-24 01:24:33,531 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-24 01:24:33,532 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-24 01:24:33,535 INFO:werkzeug:  * Restarting with stat
+2025-04-24 01:24:36,621 WARNING:werkzeug:  * Debugger is active!
+2025-04-24 01:24:36,627 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-24 01:46:44,672 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-24 01:46:44,673 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-24 01:46:44,676 INFO:werkzeug:  * Restarting with stat
+2025-04-24 01:46:47,694 WARNING:werkzeug:  * Debugger is active!
+2025-04-24 01:46:47,697 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-24 01:50:10,971 INFO:werkzeug: 127.0.0.1 - - [24/Apr/2025 01:50:10] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-24 01:50:11,691 INFO:werkzeug: 127.0.0.1 - - [24/Apr/2025 01:50:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 02:01:26,021 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\scenecreator.py', reloading
+2025-04-24 02:01:26,677 INFO:werkzeug:  * Restarting with stat
+2025-04-24 02:01:31,563 WARNING:werkzeug:  * Debugger is active!
+2025-04-24 02:01:31,568 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-29 00:32:53,686 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-29 00:32:53,686 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 00:32:53,686 INFO:werkzeug:  * Restarting with stat
+2025-04-29 00:32:56,525 WARNING:werkzeug:  * Debugger is active!
+2025-04-29 00:32:56,533 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-29 00:33:00,640 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:33:00] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-29 00:33:01,187 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:33:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 00:33:31,606 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:33:31] "[33mGET /apidocs/ HTTP/1.1[0m" 404 -
+2025-04-29 00:37:50,489 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-29 00:37:50,489 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 00:37:50,491 INFO:werkzeug:  * Restarting with stat
+2025-04-29 00:37:53,335 WARNING:werkzeug:  * Debugger is active!
+2025-04-29 00:37:53,335 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-29 00:38:04,440 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:38:04] "[33mGET /apidocs/ HTTP/1.1[0m" 404 -
+2025-04-29 00:38:34,739 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:38:34] "GET /health HTTP/1.1" 200 -
+2025-04-29 00:48:01,680 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\main.py', reloading
+2025-04-29 00:48:02,679 INFO:werkzeug:  * Restarting with stat
+2025-04-29 00:48:32,064 INFO:werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.21:5000
+2025-04-29 00:48:32,064 INFO:werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 00:48:32,081 INFO:werkzeug:  * Restarting with stat
+2025-04-29 00:48:35,189 WARNING:werkzeug:  * Debugger is active!
+2025-04-29 00:48:35,204 INFO:werkzeug:  * Debugger PIN: 206-020-201
+2025-04-29 00:48:59,094 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:48:59] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2025-04-29 00:48:59,423 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:48:59] "GET /apidocs/ HTTP/1.1" 200 -
+2025-04-29 00:48:59,786 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:48:59] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-04-29 00:48:59,893 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:48:59] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-04-29 00:49:00,014 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:00] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-04-29 00:49:00,177 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:00] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-04-29 00:49:00,955 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:00] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2025-04-29 00:49:01,012 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:01] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-04-29 00:49:01,049 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:01] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-04-29 00:49:21,857 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:21] "GET /health HTTP/1.1" 200 -
+2025-04-29 00:49:45,345 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:49:45] "GET /memory HTTP/1.1" 200 -
+2025-04-29 00:51:32,065 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:51:32] "[35m[1mPOST /generate_clip HTTP/1.1[0m" 202 -
+2025-04-29 00:51:32,065 DEBUG:__main__: Task f19d2a97-fa12-483c-8144-9a34380fe027 started in temp\f19d2a97-fa12-483c-8144-9a34380fe027
+2025-04-29 00:51:32,100 DEBUG:__main__: Initial memory usage: {'rss': 109.94921875, 'vms': 438.5546875, 'percent': 78.9}
+2025-04-29 00:51:32,112 DEBUG:openai._base_client: Request options: {'method': 'post', 'url': '/chat/completions', 'headers': {'HTTP-Referer': '<YOUR_SITE_URL>', 'X-Title': 'Text 2 Video'}, 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': [{'type': 'text', 'text': '\nYou are a world-class scene generator. Given a topic and a number of scenes, \ngenerate a structured sequence in JSON format. Each scene must include:\n- "image_prompt": A detailed visual description optimized for AI image generation.\n- "text": A vivid narrative description.\n\nExample Output:\n{\n    "scenes": [\n        {\n            "image_prompt": "A beautiful depiction of the first scene.",\n            "text": "This is the first scene.",\n            "summary": "A brief summary of the first scene."\n        }\n    ]\n}\n\nTopic: A journey through space\nNumber of Scenes: 3\n'}]}], 'model': 'microsoft/mai-ds-r1:free'}, 'extra_json': {}}
+2025-04-29 00:51:32,317 DEBUG:openai._base_client: Sending HTTP Request: POST https://openrouter.ai/api/v1/chat/completions
+2025-04-29 00:51:32,317 DEBUG:httpcore.connection: connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-29 00:51:32,744 DEBUG:httpcore.connection: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000148663AF9E0>
+2025-04-29 00:51:32,744 DEBUG:httpcore.connection: start_tls.started ssl_context=<ssl.SSLContext object at 0x000001484F3ABBD0> server_hostname='openrouter.ai' timeout=5.0
+2025-04-29 00:51:33,781 DEBUG:httpcore.connection: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000148663AFDA0>
+2025-04-29 00:51:33,781 DEBUG:httpcore.http11: send_request_headers.started request=<Request [b'POST']>
+2025-04-29 00:51:33,781 DEBUG:httpcore.http11: send_request_headers.complete
+2025-04-29 00:51:33,781 DEBUG:httpcore.http11: send_request_body.started request=<Request [b'POST']>
+2025-04-29 00:51:33,781 DEBUG:httpcore.http11: send_request_body.complete
+2025-04-29 00:51:33,781 DEBUG:httpcore.http11: receive_response_headers.started request=<Request [b'POST']>
+2025-04-29 00:51:34,731 DEBUG:httpcore.http11: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 28 Apr 2025 21:51:34 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'x-clerk-auth-message', b'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)'), (b'x-clerk-auth-reason', b'token-invalid'), (b'x-clerk-auth-status', b'signed-out'), (b'Vary', b'Accept-Encoding'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9379c81f3fc66be2-SIN'), (b'Content-Encoding', b'gzip')])
+2025-04-29 00:51:34,731 INFO:httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-29 00:51:34,731 DEBUG:httpcore.http11: receive_response_body.started request=<Request [b'POST']>
+2025-04-29 00:51:55,734 DEBUG:httpcore.http11: receive_response_body.complete
+2025-04-29 00:51:55,734 DEBUG:httpcore.http11: response_closed.started
+2025-04-29 00:51:55,737 DEBUG:httpcore.http11: response_closed.complete
+2025-04-29 00:51:55,737 DEBUG:openai._base_client: HTTP Response: POST https://openrouter.ai/api/v1/chat/completions "200 OK" Headers({'date': 'Mon, 28 Apr 2025 21:51:34 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'x-clerk-auth-message': 'Invalid JWT form. A JWT consists of three parts separated by dots. (reason=token-invalid, token-carrier=header)', 'x-clerk-auth-reason': 'token-invalid', 'x-clerk-auth-status': 'signed-out', 'vary': 'Accept-Encoding', 'server': 'cloudflare', 'cf-ray': '9379c81f3fc66be2-SIN', 'content-encoding': 'gzip'})
+2025-04-29 00:51:55,737 DEBUG:openai._base_client: request_id: None
+2025-04-29 00:51:55,765 DEBUG:__main__: Memory usage after scene generation: {'rss': 111.7578125, 'vms': 438.8359375, 'percent': 77.3}
+2025-04-29 00:51:55,767 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-11-10.0.26100-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 11 10.0.26100 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A futuristic rocket launching at dawn from a desert launchpad, fiery thrusters illuminating the sand, with a gradient sky transitioning from deep indigo to golden-orange. Distant stars twinkle faintly as the rocket ascends.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-29 00:51:55,767 DEBUG:urllib3.util.retry: Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2025-04-29 00:51:55,773 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.xyz:443
+2025-04-29 00:52:17,912 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:17] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:25,294 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:25] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:29,361 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-29 00:52:29,361 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=9379c8b0cc5ff838-SIN response_code=200
+2025-04-29 00:52:29,365 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-29 00:52:29,459 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:29] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:31,257 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/sU5Y3TMGBB1W3yMWp_52cAp8ILXZyhAJZFgAsFiPvHU/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzczNWM2M2RiNTJlMDQ4ZWJkMjExMWRiMGVhOTM2N2ExMmQ1Mjc1NTM2NmMxMzZmZjg3ZDI1MWY4MmNlNzU0NWQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0hFUEpOQzNPJTJGMjAyNTA0MjglMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDI4VDIxNTIyOVomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFT2IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpHTUVRQ0lEdEtOWGx2REJTMW5Fa0FEcFRwM0tTVVJRcyUyQkRyS1VZeTdOUmJVdFZicHdBaUJuN0x2OWZsM205R2JVMG4xNlQzNjVqWTJGd1VQZ1pLVlEyUSUyRkZNeFRXbVNxUUJRaCUyRkVBQWFERFU1T0RjeU5qRTJNemM0TUNJTTBjbTFvaEJtTTFHTU9KRXRLdTBFMmlRR1ZFQmI1Wno5b3lZQ1BLaTh3YVdkY1ZpWmhSTzRaekhqdmdQV05WWFRoRUl1OVJudzlmZ00wUmV6RVluZDhBQ1hSVVRuOWU1bmZuR0d0a0lZZ2pLV0R2enMyUXdiNElydzZ5VnRzRUdrSGhlNTc3TXdUUEljVkhFb3FXMFRIRll1RCUyQmlFeWgzNktoN0UxYjdibUQ1UDlyU3Ewb1NEWVlwM1AzWFFnYU9Va1QwRDBmaWJIOGdpS2xTQSUyRnZQbmJYbXNOJTJCckFPdU5jQ3VKcUp4RmF2RzJIWlEzSDAydjkwemtwODcxbUFKV1JQQ3RVQ294amFJY1AlMkZGOHVkZlowV2N3Mm52ZkJ0OU5zOVZUQjdWMWJMJTJGZXdlNGdSclZjYTYwaDcxWHJ3VXlNb3g5ZUp5eVhRQjYlMkZNRkZpSXZIaUpUOUFSR0lGd3lzZFdCbHJ5JTJGRlJjUUFBWjhSUEV5RDR2djh5UyUyQkRZdE4lMkZDemwzMmpBVk1rSVJwNXRFcnVPazlIeGwwUzc1TG0xNVpyWFFoUjF4alN1QXJZJTJCQ1pPR2ZtR2lHcHNMcmRlZ1dMOVBnMWNSdyUyRm9WbmFudlN1WkJycnJHc0E2VU1FcVIzbG5DejZXeUNzZlNLWEZsa2VUdzhadUpzRFBaNERVTk1yTG5mTkQ5YXg4dlJQM1hibnVzV0o5eXp3OTJLS1FBNjhrM2w0bnNMT2hiQUhWTiUyRndYNkFnUmdXRU45UHJRTTJSbXpEdHFLTHlERXFHZ3B0TExoc2lwa1g0U0lpbHUyMWdQb1hJZUl2ZUpDTnJxQmVockRXdmpaRjJKeWpkRWZGWHJwdThHVll3TnIlMkJqdUxlZHUzYmdtam9hbGptc2ZpejdQWXd1TXV3VTIzdXk5OUg0M2NaRXhEMlh6UXBQV2tFRFZmZnBDWVQycG04OHJHU2lFQ081Z0ZSenVvSGRMeWVXdldNZ2phdlhOaWxOJTJGRkZUTGJpVW1JbzR0NG12ZkhrJTJCTkdoQTZKMGwwJTJCOFBHRTBMbGppRUQxYVJ0c3FMdFd0bjJ3a0N3THNPcjlLVkw4RFRwbnJoRFolMkZpS0FvaGlNMVZhQVE1bkM0WjB5ZmJIaGU5ZU1KM3h2OEFHT3B3QmlNV0dTMXVoMGlXUVh3OFhuaVV3dUVnT3JMS2ppaXZTRTJqJTJGWnRiQVhxeGpoZmZNcUN5am4lMkJXRk1wWkV3diUyRjBCdTdCenh6TmVQQ0ZTYzhFNGRkcjFpOElLVkpsaHhUbktWQjVUaEp1ZnZ5WWNORFZkeWVJJTJGY2JOdGZ0SVFpODl1SGFJZXBoaTBEbVc2QUgzbzVJRUhKYlZ3cHgyaHk3N3RCM0lwOHdzUEdHeWplZTQlMkJERHFTUUVlOXVsVkZINDZ5ME44TkppSlF5U2JZMWlwJlgtQW16LVNpZ25hdHVyZT1iMzdkOWI5ZTBhZGIyNWZiMjBjYWZlZmE3ODY4ZDRiMjk4MmI5MDZmNGNiZDFiYWNiNGIyMGVkZTBjNGM2ZDhhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPUdldE9iamVjdA HTTP/1.1" 200 65243
+2025-04-29 00:52:31,895 DEBUG:__main__: Memory usage after generating image scene0: {'rss': 111.8359375, 'vms': 438.77734375, 'percent': 75.4}
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: text: The spacecraft roars to life, piercing the morning silence. Flames engulf the launchpad as it ascends, leaving a trail of smoke that spirals into the stratosphere. The crew feels the crushing weight of gravity before the sudden calm of zero-G.
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: tld: com
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: lang: en
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: slow: False
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: lang_check: True
+2025-04-29 00:52:31,896 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001484CE35BC0>, <function end_of_line at 0x000001484CE36700>, <function abbreviations at 0x000001484CE35DA0>, <function word_sub at 0x000001484CE367A0>]
+2025-04-29 00:52:31,953 DEBUG:gtts.tts: timeout: None
+2025-04-29 00:52:31,953 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-29 00:52:31,953 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001484CE35BC0>
+2025-04-29 00:52:31,958 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001484CE36700>
+2025-04-29 00:52:31,958 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001484CE35DA0>
+2025-04-29 00:52:31,958 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001484CE367A0>
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: text_parts: ['The spacecraft roars to life', 'piercing the morning silence', 'Flames engulf the launchpad as it ascends', 'leaving a trail of smoke that spirals into the stratosphere', 'The crew feels the crushing weight of gravity before the sudden calm of zero-G.']
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: text_parts: 5
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20spacecraft%20roars%20to%20life%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22piercing%20the%20morning%20silence%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Flames%20engulf%20the%20launchpad%20as%20it%20ascends%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:52:31,963 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22leaving%20a%20trail%20of%20smoke%20that%20spirals%20into%20the%20stratosphere%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:52:31,969 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20crew%20feels%20the%20crushing%20weight%20of%20gravity%20before%20the%20sudden%20calm%20of%20zero-G.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:52:31,971 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:52:32,111 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:32] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:33,689 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:52:34,106 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '166'}
+2025-04-29 00:52:34,108 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:52:34,108 DEBUG:gtts.tts: status-0: 200
+2025-04-29 00:52:34,109 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene0.mp3'>
+2025-04-29 00:52:34,109 DEBUG:gtts.tts: part-0 created
+2025-04-29 00:52:34,110 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:52:34,636 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:34] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:35,287 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:52:35,693 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '164'}
+2025-04-29 00:52:35,693 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:52:35,693 DEBUG:gtts.tts: status-1: 200
+2025-04-29 00:52:35,693 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene0.mp3'>
+2025-04-29 00:52:35,693 DEBUG:gtts.tts: part-1 created
+2025-04-29 00:52:35,693 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:52:36,412 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:36] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:37,143 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:52:37,522 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '183'}
+2025-04-29 00:52:37,529 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:52:37,529 DEBUG:gtts.tts: status-2: 200
+2025-04-29 00:52:37,553 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene0.mp3'>
+2025-04-29 00:52:37,553 DEBUG:gtts.tts: part-2 created
+2025-04-29 00:52:37,553 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:52:39,534 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:52:40,386 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '207'}
+2025-04-29 00:52:40,386 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:52:40,386 DEBUG:gtts.tts: status-3: 200
+2025-04-29 00:52:40,386 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene0.mp3'>
+2025-04-29 00:52:40,386 DEBUG:gtts.tts: part-3 created
+2025-04-29 00:52:40,386 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:52:40,563 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:40] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:41,783 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:52:42,143 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:42] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:42,404 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '235'}
+2025-04-29 00:52:42,404 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:52:42,404 DEBUG:gtts.tts: status-4: 200
+2025-04-29 00:52:42,404 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene0.mp3'>
+2025-04-29 00:52:42,404 DEBUG:gtts.tts: part-4 created
+2025-04-29 00:52:42,412 DEBUG:gtts.tts: Saved to temp\f19d2a97-fa12-483c-8144-9a34380fe027\Audio\scene0.mp3
+2025-04-29 00:52:42,437 DEBUG:__main__: Memory usage after generating audio scene0: {'rss': 112.94921875, 'vms': 440.33984375, 'percent': 75.3}
+2025-04-29 00:52:42,437 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-11-10.0.26100-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 11 10.0.26100 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "An astronaut floating near a shimmering nebula, its swirling gases glowing in violet, teal, and crimson. The Milky Way stretches behind them, and their spacesuit reflects the nebula\'s light.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-29 00:52:44,168 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:44] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:45,799 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:45] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:48,761 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:48] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:50,342 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:50] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:52:51,960 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:52:51] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:07,496 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:07] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:13,219 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:13] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:18,243 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:18] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:24,990 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:24] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:26,220 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:26] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:27,669 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:27] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:28,903 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:28] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:30,065 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:53:30] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:53:42,731 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-29 00:53:42,916 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=9379c9cbeb9bf838-SIN response_code=200
+2025-04-29 00:53:42,922 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-29 00:53:44,890 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/NxSdZi0ncAbnGNalqdx_elj4T8tETb13Bg2PLM2r1b0/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzk3NjljNGI3MDE5NmZiMWVkNzFhODFlZjExNTI3MjRhMzk5MzYwNTRlM2VkZjQ5ZDk5OTFjMWFhZGY2ZDZjMDc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0JGVklHNjRGJTJGMjAyNTA0MjglMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDI4VDIxNTM0MlomWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFT2IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpITUVVQ0lFWjJnbmNINHJWMUcyNWNWU2dJWDltJTJGRm1YVzlSdXZQOFdvU0klMkY2akdxZEFpRUF2bzR6aG12WWJUczJLQXE5WHMyMFFhUGdpYzl4JTJGaDA2SXRYZU16YTBZV29xa0FVSWZ4QUFHZ3cxT1RnM01qWXhOak0zT0RBaURISGplY3lzSlNNTXpwWk0lMkJDcnRCRWVzWVJFbFhMbU13NVR4c2JhZ0JLY01iM3E1MjJablZNWUZ6cktsdE1DdHBTS0E2akRpMW14cHBwR1hhcUxzTEdsQjhIeHhJTGdkRSUyRlVsNHpYaXkwMHBsSm1FcmNaTmtudFIlMkZ4JTJGMCUyRlR3RjJ1NjVYQkRGRW9YaXFIOG5OVndqT1U4WlR6eWllTW5mVmtuRHE4V0slMkJ2Yk5KUko1UXZwejJNYVFjbmhTWDRCS2FTTnp4VnNEYVRLSFYzN25BZ1MlMkYlMkJXMkZxWUlQd3dnNTIlMkJqUmR1QnlmUG5ZS09BMmpTWXB5RTJNeSUyRlRFdHNIZGNTamh5N3R4aGl0a2VRYVM0TzJvOXF5TGRzSFRXZG45bWc3WnExMWwlMkIybjh0SkwybHR6aG1KSWJvdVZsVm9mOVVPSml1ZDBCUzgzVWh5a01yS2dVT29Ia2xTdzNYJTJGZFJCTk5RYjlyOURnTUdPclBsTDlzclVOWFlaYWdpV3p2NlY4SmRDNXNDUEZxYUpDcyUyRlZIcllOZURWYWo3S2VVT3ZMOXJwJTJCcVVITzNsZWhiV1hEaFB1b3ZncGNYS1daVHZITGFjMmhhbFAwTElwbjlOMDhYYjg2VmdyMSUyRkRBcThFTjhLZDMlMkZPeVMlMkYwdktuUnlqWjhqUiUyQjlobmdSSFFOM0N4TkxSaVlnbXJZYnpBOCUyRjFHOFdPMUhVdTNZeHpJJTJCcVZEUmZRcURXSTFFMTdnQUVveUZOaXZrYWglMkJBT3F2RjNBMURSWUFyV1NWdHRDamU1VlF5SjlOYiUyQlhPT3VIbHNyeGdqVTNCSkxsYzE5WSUyQlNFY1JnMXZ3S01CdzlDNGtVbm9OTjNOOTVtOHBLazJIR0p4QW1XbDhkMVBhYWpXbnY2bEE3enB0MGxCOGs5NjN4M1hUeTJQTWpWR2xGcSUyQkRZeTc4dUdYd3I3bEZTRk1QNERyNnk4OWRMUTRnWUhhNE5SazlDWURLd0xhNlp5SVZzQmhSTXJRcUxTSndyN1hiVktkeExGYktNaW9DelJTeVpuaG5lbW5EU3hXd0dLMnlOcG1YMmEweXlRTk5aY1prWXdWaUF6RFY5czQzVngwWTJqS2RjWUNUeFd2YnpTRUhsYVNFUmpEbThiJTJGQUJqcWJBWE56YTMlMkZnbnJUOVdic0h1SDRQSXFqRVIzJTJGQVhNRWc1cjhxb0dnaSUyQkZGSkRsaVlUaG9pQUZJTHVva3c3blVSajU4Q3BZVVZKaXZCWWU1ZTdjZTR2QjNvMXV6JTJGT21Ca0dhc0N4SWJxRSUyRlpzNzc0QVVCV1olMkZBM1gxMjlta0dCSnI3NFJyTVFTMWE5bnVyOXhIWjFqRGZVbUxrcnUwektpVnR0ZHhBM1NGRG8lMkJuNkUyTk9JMGMwc0pEdkRPdEFQSndSTTByWDFJS29PQkNFcE0mWC1BbXotU2lnbmF0dXJlPTdiNGUxZjk0ODllNDRlMDE0NzhmN2EyNDgwYjA1ZGRkNzJhNzAyZGExN2RmNjkxMmNjMTRmYTJiMDAzY2NmMmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JngtaWQ9R2V0T2JqZWN0 HTTP/1.1" 200 243650
+2025-04-29 00:53:46,103 DEBUG:__main__: Memory usage after generating image scene1: {'rss': 113.9609375, 'vms': 441.2890625, 'percent': 75.7}
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: text: Adrift in the cosmic sea, the crew marvels at the nebula’s kaleidoscopic tendrils. Particles of stardust cling to their visors as they collect samples, their voices muted by the vacuum. A nearby supernova remnant pulses like a dying heartbeat.
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: tld: com
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: lang: en
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: slow: False
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: lang_check: True
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001484CE35BC0>, <function end_of_line at 0x000001484CE36700>, <function abbreviations at 0x000001484CE35DA0>, <function word_sub at 0x000001484CE367A0>]
+2025-04-29 00:53:46,103 DEBUG:gtts.tts: timeout: None
+2025-04-29 00:53:46,109 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001484CE35BC0>
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001484CE36700>
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001484CE35DA0>
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001484CE367A0>
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: text_parts: ['Adrift in the cosmic sea', 'the crew marvels at the nebula’s kaleidoscopic tendrils', 'Particles of stardust cling to their visors as they collect samples', 'their voices muted by the vacuum', 'A nearby supernova remnant pulses like a dying heartbeat.']
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: text_parts: 5
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Adrift%20in%20the%20cosmic%20sea%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:53:46,109 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22the%20crew%20marvels%20at%20the%20nebula%5C%5Cu2019s%20kaleidoscopic%20tendrils%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:53:46,116 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Particles%20of%20stardust%20cling%20to%20their%20visors%20as%20they%20collect%20samples%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:53:46,116 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22their%20voices%20muted%20by%20the%20vacuum%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:53:46,116 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22A%20nearby%20supernova%20remnant%20pulses%20like%20a%20dying%20heartbeat.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:53:46,117 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:53:47,849 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:53:48,247 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '162'}
+2025-04-29 00:53:48,247 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:53:48,247 DEBUG:gtts.tts: status-0: 200
+2025-04-29 00:53:48,249 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene1.mp3'>
+2025-04-29 00:53:48,249 DEBUG:gtts.tts: part-0 created
+2025-04-29 00:53:48,249 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:53:49,652 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:53:50,068 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '209'}
+2025-04-29 00:53:50,068 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:53:50,068 DEBUG:gtts.tts: status-1: 200
+2025-04-29 00:53:50,077 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene1.mp3'>
+2025-04-29 00:53:50,077 DEBUG:gtts.tts: part-1 created
+2025-04-29 00:53:50,077 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:53:51,433 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:53:52,111 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '217'}
+2025-04-29 00:53:52,111 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:53:52,111 DEBUG:gtts.tts: status-2: 200
+2025-04-29 00:53:52,111 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene1.mp3'>
+2025-04-29 00:53:52,119 DEBUG:gtts.tts: part-2 created
+2025-04-29 00:53:52,121 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:53:53,599 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:53:53,982 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '172'}
+2025-04-29 00:53:53,982 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:53:53,982 DEBUG:gtts.tts: status-3: 200
+2025-04-29 00:53:53,982 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene1.mp3'>
+2025-04-29 00:53:53,982 DEBUG:gtts.tts: part-3 created
+2025-04-29 00:53:53,982 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:53:55,216 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:53:55,639 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '203'}
+2025-04-29 00:53:55,651 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:53:55,651 DEBUG:gtts.tts: status-4: 200
+2025-04-29 00:53:55,651 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene1.mp3'>
+2025-04-29 00:53:55,651 DEBUG:gtts.tts: part-4 created
+2025-04-29 00:53:55,651 DEBUG:gtts.tts: Saved to temp\f19d2a97-fa12-483c-8144-9a34380fe027\Audio\scene1.mp3
+2025-04-29 00:53:55,675 DEBUG:__main__: Memory usage after generating audio scene1: {'rss': 113.9609375, 'vms': 441.2890625, 'percent': 75.8}
+2025-04-29 00:53:55,679 DEBUG:together: headers='{"X-Together-Client-User-Agent": "{\\"bindings_version\\": \\"1.5.4\\", \\"httplib\\": \\"requests\\", \\"lang\\": \\"python\\", \\"lang_version\\": \\"3.12.8\\", \\"platform\\": \\"Windows-11-10.0.26100-SP0\\", \\"publisher\\": \\"together\\", \\"uname\\": \\"Windows 11 10.0.26100 AMD64 AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD\\"}", "Authorization": "Bearer tgp_v1_9n0f8QEvxpj-_ik7Jers8PXAR04ojov81UgwRHLMApw", "User-Agent": "Together/v1 PythonBindings/1.5.4", "Content-Type": "application/json"}' message='Request to Together API' method=POST path=https://api.together.xyz/v1/images/generations post_data='{"prompt": "A sleek silver spacecraft approaching an alien megastructure: a crystalline space station orbiting a ringed planet. Bioluminescent alien vessels hover nearby, their hulls patterned with geometric light.", "model": "black-forest-labs/FLUX.1-schnell-Free", "steps": 3, "seed": 131346467979, "n": 1, "height": 1024, "width": 1024, "guidance_scale": 6}'
+2025-04-29 00:54:09,403 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:54:09] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:54:27,656 DEBUG:urllib3.connectionpool: https://api.together.xyz:443 "POST /v1/images/generations HTTP/1.1" 200 None
+2025-04-29 00:54:28,046 DEBUG:together: message='Together API response' path=https://api.together.xyz/v1/images/generations processing_ms=None request_id=9379cb95ab1cf838-SIN response_code=200
+2025-04-29 00:54:28,050 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): api.together.ai:443
+2025-04-29 00:54:29,514 DEBUG:urllib3.connectionpool: https://api.together.ai:443 "GET /imgproxy/PR2vVfyW5RfrJxJTSLd9F2G_HnJU0tT37FpN3ONcp5s/format:jpeg/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzhlNTQ2YTExOTJlMjkzNjVkMDY5ZTA5YjM5ZGJkZGM4YzBjNjY1ODkwYjA4ZTljNzJmODIyYTdiYzFlYzY3NDU_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUFTSUFZV1pXNEhWQ0JXVUxRQURVJTJGMjAyNTA0MjglMkZ1cy13ZXN0LTIlMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDI4VDIxNTQyN1omWC1BbXotRXhwaXJlcz0zNjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFT2IlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkYlMkZ3RWFDWFZ6TFhkbGMzUXRNaUpJTUVZQ0lRQzZZNVRaTnBXNU9tcnBWQUpSOUpkYUwwVk5TM0Q1cGRQbTVNWUFWZlFsJTJGQUloQU5VaSUyRk4xU0c1JTJCd3MlMkIydHo2VyUyRlhYZzlxWlVRRTE4eFBzOU4lMkZ6SVdrNm5sS3BBRkNIOFFBQm9NTlRrNE56STJNVFl6Tnpnd0lnekROWTFYMTBIaHYwMU5vYUVxN1FTJTJGRVpUWEc3U3BzaXROSWw5MDllNURtdHdZUmYxd1RpZWROVEZSV0FneU9rSGVFbm9KSEhwRFdDSVhLbiUyQmFVZzg1Umx1OWc4NGpwVGhSc1ljOUxmUnRCRDJTcEl2TnNxYzFQV24lMkYwUlVZS0dRNEMxbzh5JTJGeFV4UWxtUkZpJTJGMHBuMlYlMkJIVHNFaXRIMmxKeGpjVFdrMjZFNENMTnM0bHVFMzdYaUlvM3FrQ2d1QSUyQkF2c0dPNWpsaW1VNVQyR1NSakZZSlpwdSUyQjFTVWglMkZkdXlnMnhYS1R3U3ZRbWdnRU1yRjVNZlliZlpOQ0JKcXdUdGhucjlVNDJxN21WOWt0emZ6dzg3WEVReW1zcFExTjF5am5JeGpuaEFLcFBFWmRMQ3p5QWFJRTJpeVlGeDdacEZybTFtd2pscWhTTjYlMkI5biUyRnkwNThENEZtRUZqcXFyWWZLMTh1NlZ1QmczMmthOGVQc2loMUpYVDZ6RTFPNXZHN2ZWN3hvV1pjNmpnJTJGNElDdjlUNm9nJTJCQjhkald6Z0EwVU1vNHRVTmtkdU84MFhoS04ySk1SJTJGTlZVJTJGS25zUE4lMkY2QjR2cHR3MGhGNTJXQmFlbjk3VnQlMkJpV1J6WkpTV1pSUTF4TDl4Z21FaTZtRDB5SnRBWFhhS1FSR1FLVUpQRmg4MGVIUDN3bnVYV05LYmtMT3dCZlJ6U3I5c2xiR1IxZUZCd0tYVTVFSUJvSkxaM1IyWVdRcHBlJTJCOXBBWko2dkExTzR1V04ybFJIb3lkY2hqakpjMSUyQlNsSjQ5cm1GNFFBaDJBNEJ6UVp2RUxjWWUwZDZkTTNwbiUyQlF3MnElMkZxdzhDeTlmc2NWb1hQajZGeVpsYVZSQ09WUmdCQnF3b0ElMkY2bWRGckRxJTJCYTVQdG1ydld5WDEyT1BRdU40TVFlb0xKSW1ZYmxHSFF2emZyb2F2NG9ncmlUQXViSmhpdlRXMDFESERLJTJGY1UyN2RaU2cxcHZjOXZQTjhyJTJGR0tscGdVYnBZV0tHSmtZd1BjdURibHIyOVJ0NkJaQmxJN0c5dWNYZmZQaWJ3ejV4JTJCdlpKU1BPbHBGUDh5bm9iMGNkSFlONzhRVkYxM0l5akV2dTM5Y2tMSXdrJTJGSyUyRndBWTZtZ0VkeEtnYU10UnpqT2NGWjdnUkd5SnR6SzZnVjUlMkJvNURYQmxBVnF5eGxpMGc5QzU0TG0xdXFpbTNKcWl4bjNwaiUyQlpsaDhBWjRqRHVGdHo3RFkwcGpseDBBS28wdyUyQndaOXlodDBySGRUMFB4d1lLNXVkdnp1eWlCbHpmcDV3RFNGd0NzbDZ0SlpURlM2ZUNsVklSV0dONEFqcHM4emxVN3NxSkZSOFZZazRDdWpVbmxadDV4bWcxTjFpJTJGQzBsRHlwaWtKc2VkN0MlMkJuNlpHMyZYLUFtei1TaWduYXR1cmU9YjdmMTBiYWM2MWZjZjcyMjRmYWI4MGVlNTE2YWNhOWEwYjZjYzk1NTc5MTI0N2FiMDNhZWZkNjZhYTljODViOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1HZXRPYmplY3Q HTTP/1.1" 200 84621
+2025-04-29 00:54:30,455 DEBUG:__main__: Memory usage after generating image scene2: {'rss': 113.9609375, 'vms': 441.2890625, 'percent': 75.5}
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: text: The ship’s sensors ping wildly as they near the alien station. Translucent beings glide forward, their forms shifting like liquid mercury. Through holographic symbols, they offer a star map to uncharted galaxies.
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: tld: com
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: lang: en
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: slow: False
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: lang_check: True
+2025-04-29 00:54:30,456 DEBUG:gtts.tts: pre_processor_funcs: [<function tone_marks at 0x000001484CE35BC0>, <function end_of_line at 0x000001484CE36700>, <function abbreviations at 0x000001484CE35DA0>, <function word_sub at 0x000001484CE367A0>]
+2025-04-29 00:54:30,459 DEBUG:gtts.tts: timeout: None
+2025-04-29 00:54:30,459 DEBUG:gtts.lang: langs: {'af': 'Afrikaans', 'am': 'Amharic', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'eu': 'Basque', 'fi': 'Finnish', 'fr': 'French', 'fr-CA': 'French (Canada)', 'gl': 'Galician', 'gu': 'Gujarati', 'ha': 'Hausa', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lt': 'Lithuanian', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pa': 'Punjabi (Gurmukhi)', 'pl': 'Polish', 'pt': 'Portuguese (Brazil)', 'pt-PT': 'Portuguese (Portugal)', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'yue': 'Cantonese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+2025-04-29 00:54:30,463 DEBUG:gtts.tts: pre-processing: <function tone_marks at 0x000001484CE35BC0>
+2025-04-29 00:54:30,463 DEBUG:gtts.tts: pre-processing: <function end_of_line at 0x000001484CE36700>
+2025-04-29 00:54:30,463 DEBUG:gtts.tts: pre-processing: <function abbreviations at 0x000001484CE35DA0>
+2025-04-29 00:54:30,463 DEBUG:gtts.tts: pre-processing: <function word_sub at 0x000001484CE367A0>
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: text_parts: ['The ship’s sensors ping wildly as they near the alien station', 'Translucent beings glide forward', 'their forms shifting like liquid mercury', 'Through holographic symbols', 'they offer a star map to uncharted galaxies.']
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: text_parts: 5
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22The%20ship%5C%5Cu2019s%20sensors%20ping%20wildly%20as%20they%20near%20the%20alien%20station%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: data-1: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Translucent%20beings%20glide%20forward%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: data-2: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22their%20forms%20shifting%20like%20liquid%20mercury%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:54:30,468 DEBUG:gtts.tts: data-3: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Through%20holographic%20symbols%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:54:30,470 DEBUG:gtts.tts: data-4: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22they%20offer%20a%20star%20map%20to%20uncharted%20galaxies.%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+2025-04-29 00:54:30,470 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:54:32,006 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:54:32,479 DEBUG:gtts.tts: headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '221'}
+2025-04-29 00:54:32,479 DEBUG:gtts.tts: url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:54:32,479 DEBUG:gtts.tts: status-0: 200
+2025-04-29 00:54:32,479 DEBUG:gtts.tts: part-0 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene2.mp3'>
+2025-04-29 00:54:32,479 DEBUG:gtts.tts: part-0 created
+2025-04-29 00:54:32,479 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:54:33,715 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:54:34,134 DEBUG:gtts.tts: headers-1: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '168'}
+2025-04-29 00:54:34,134 DEBUG:gtts.tts: url-1: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:54:34,134 DEBUG:gtts.tts: status-1: 200
+2025-04-29 00:54:34,134 DEBUG:gtts.tts: part-1 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene2.mp3'>
+2025-04-29 00:54:34,134 DEBUG:gtts.tts: part-1 created
+2025-04-29 00:54:34,134 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:54:35,352 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:54:35,723 DEBUG:gtts.tts: headers-2: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '180'}
+2025-04-29 00:54:35,723 DEBUG:gtts.tts: url-2: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:54:35,723 DEBUG:gtts.tts: status-2: 200
+2025-04-29 00:54:35,723 DEBUG:gtts.tts: part-2 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene2.mp3'>
+2025-04-29 00:54:35,738 DEBUG:gtts.tts: part-2 created
+2025-04-29 00:54:35,738 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:54:37,046 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:54:37,438 DEBUG:gtts.tts: headers-3: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '161'}
+2025-04-29 00:54:37,440 DEBUG:gtts.tts: url-3: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:54:37,442 DEBUG:gtts.tts: status-3: 200
+2025-04-29 00:54:37,445 DEBUG:gtts.tts: part-3 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene2.mp3'>
+2025-04-29 00:54:37,447 DEBUG:gtts.tts: part-3 created
+2025-04-29 00:54:37,449 DEBUG:urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-04-29 00:54:38,693 DEBUG:urllib3.connectionpool: https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: headers-4: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '188'}
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: url-4: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: status-4: 200
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: part-4 written to <_io.BufferedWriter name='temp\\f19d2a97-fa12-483c-8144-9a34380fe027\\Audio\\scene2.mp3'>
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: part-4 created
+2025-04-29 00:54:39,125 DEBUG:gtts.tts: Saved to temp\f19d2a97-fa12-483c-8144-9a34380fe027\Audio\scene2.mp3
+2025-04-29 00:54:39,159 DEBUG:__main__: Memory usage after generating audio scene2: {'rss': 113.96875, 'vms': 441.2890625, 'percent': 75.4}
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,548 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,895 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:39,910 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 86 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:40,164 DEBUG:PIL.TiffImagePlugin: tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 94 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2025-04-29 00:54:40,168 DEBUG:PIL.TiffImagePlugin: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-04-29 00:54:40,168 DEBUG:PIL.TiffImagePlugin: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x01\x00'
+2025-04-29 00:54:40,168 DEBUG:PIL.TiffImagePlugin: tag: ExifIFD (34665) - type: long (4) - value: b'f\x00\x00\x00'
+2025-04-29 00:55:44,672 DEBUG:__main__: Memory usage after video creation: {'rss': 123.734375, 'vms': 450.140625, 'percent': 75.1}
+2025-04-29 00:56:14,040 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:56:14] "GET /progress/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 00:59:55,807 DEBUG:__main__: Successfully deleted temp\f19d2a97-fa12-483c-8144-9a34380fe027
+2025-04-29 00:59:55,809 INFO:werkzeug: 127.0.0.1 - - [29/Apr/2025 00:59:55] "DELETE /delete_temp/f19d2a97-fa12-483c-8144-9a34380fe027 HTTP/1.1" 200 -
+2025-04-29 01:11:00,438 INFO:werkzeug:  * Detected change in 'C:\\Cairo\\A1_programming\\text2video\\scenecreator.py', reloading

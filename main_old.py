@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS  # Import CORS
-from flasgger import Swagger, swag_from  # Import Flasgger for Swagger
 from text2speech import text2speech
 from scenecreator import createscenes as create_scenes
 from generateimage import generate_image
@@ -18,15 +17,6 @@ import psutil
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-
-# Configure Swagger
-app.config['SWAGGER'] = {
-    'title': 'Video Generation API',
-    'uiversion': 3,
-    'description': 'API for generating videos from text prompts, with scene creation, image generation, and audio synthesis.',
-    'version': '1.0.0'
-}
-swagger = Swagger(app)
 
 load_dotenv()
 BASE_TEMP_DIR = "temp"
@@ -140,46 +130,6 @@ def get_memory_usage():
     }
 
 @app.route('/generate_clip', methods=['POST'])
-@swag_from({
-    'tags': ['Video Generation'],
-    'summary': 'Start video generation task',
-    'description': 'Initiates an asynchronous video generation task based on a topic and number of scenes.',
-    'parameters': [
-        {
-            'name': 'body',
-            'in': 'body',
-            'required': True,
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'topic': {'type': 'string', 'example': 'A journey through space'},
-                    'num_scenes': {'type': 'integer', 'example': 3}
-                },
-                'required': ['topic', 'num_scenes']
-            }
-        }
-    ],
-    'responses': {
-        202: {
-            'description': 'Task accepted',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'task_id': {'type': 'string', 'example': '123e4567-e89b-12d3-a456-426614174000'}
-                }
-            }
-        },
-        400: {
-            'description': 'Invalid input',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Missing topic or num_scenes'}
-                }
-            }
-        }
-    }
-})
 def start_generate_video():
     data = request.get_json()
     if not data or "topic" not in data or "num_scenes" not in data:
@@ -200,44 +150,6 @@ def start_generate_video():
     return jsonify({"task_id": task_id}), 202
 
 @app.route('/progress/<task_id>', methods=['GET'])
-@swag_from({
-    'tags': ['Video Generation'],
-    'summary': 'Check task progress',
-    'description': 'Retrieves the progress status of a video generation task.',
-    'parameters': [
-        {
-            'name': 'task_id',
-            'in': 'path',
-            'type': 'string',
-            'required': True,
-            'description': 'The ID of the task',
-            'example': '123e4567-e89b-12d3-a456-426614174000'
-        }
-    ],
-    'responses': {
-        200: {
-            'description': 'Task status',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'state': {'type': 'string', 'enum': ['PENDING', 'PROGRESS', 'SUCCESS', 'FAILURE'], 'example': 'PROGRESS'},
-                    'status': {'type': 'string', 'example': 'Generating scenes'},
-                    'download_url': {'type': 'string', 'example': '/download/123e4567-e89b-12d3-a456-426614174000'}
-                }
-            }
-        },
-        404: {
-            'description': 'Task not found',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'state': {'type': 'string', 'example': 'PENDING'},
-                    'status': {'type': 'string', 'example': 'Task not found or queued'}
-                }
-            }
-        }
-    }
-})
 def get_progress(task_id):
     task_dir = os.path.join(BASE_TEMP_DIR, task_id)
     status_file = os.path.join(task_dir, "status.json")
@@ -259,61 +171,6 @@ def get_progress(task_id):
     return jsonify(response)
 
 @app.route('/download/<task_id>', methods=['GET'])
-@swag_from({
-    'tags': ['Video Generation'],
-    'summary': 'Download generated video',
-    'description': 'Downloads the generated video file for a completed task.',
-    'parameters': [
-        {
-            'name': 'task_id',
-            'in': 'path',
-            'type': 'string',
-            'required': True,
-            'description': 'The ID of the task',
-            'example': '123e4567-e89b-12d3-a456-426614174000'
-        }
-    ],
-    'responses': {
-        200: {
-            'description': 'Video file',
-            'content': {
-                'video/mp4': {
-                    'schema': {
-                        'type': 'string',
-                        'format': 'binary'
-                    }
-                }
-            }
-        },
-        400: {
-            'description': 'Task not completed or failed',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Task not completed or failed'}
-                }
-            }
-        },
-        404: {
-            'description': 'Task not found',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Task not found'}
-                }
-            }
-        },
-        500: {
-            'description': 'Video file not found',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Video file not found'}
-                }
-            }
-        }
-    }
-})
 def download_video(task_id):
     task_dir = os.path.join(BASE_TEMP_DIR, task_id)
     status_file = os.path.join(task_dir, "status.json")
@@ -344,65 +201,15 @@ def download_video(task_id):
     return response
 
 @app.route('/cleanup', methods=['POST'])
-@swag_from({
-    'tags': ['Maintenance'],
-    'summary': 'Clean up old temporary directories',
-    'description': 'Manually triggers cleanup of temporary directories older than 24 hours.',
-    'responses': {
-        200: {
-            'description': 'Cleanup successful',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'message': {'type': 'string', 'example': 'Cleaned up 5 old temporary directories'}
-                }
-            }
-        }
-    }
-})
 def manual_cleanup():
     deleted = cleanup_old_temp_dirs()
     return jsonify({"message": f"Cleaned up {deleted} old temporary directories"}), 200
 
 @app.route('/health', methods=['GET'])
-@swag_from({
-    'tags': ['Maintenance'],
-    'summary': 'Health check',
-    'description': 'Checks if the API is running and healthy.',
-    'responses': {
-        200: {
-            'description': 'API is healthy',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'status': {'type': 'string', 'example': 'healthy'}
-                }
-            }
-        }
-    }
-})
 def health_check():
     return jsonify({"status": "healthy"}), 200
 
 @app.route('/memory', methods=['GET'])
-@swag_from({
-    'tags': ['Maintenance'],
-    'summary': 'Get memory usage',
-    'description': 'Returns the current memory usage of the API process and system.',
-    'responses': {
-        200: {
-            'description': 'Memory usage details',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'rss_mb': {'type': 'number', 'example': 50.5},
-                    'vms_mb': {'type': 'number', 'example': 100.2},
-                    'system_memory_percent': {'type': 'number', 'example': 75.3}
-                }
-            }
-        }
-    }
-})
 def memory_usage():
     memory = get_memory_usage()
     return jsonify({
@@ -412,60 +219,10 @@ def memory_usage():
     }), 200
 
 @app.route('/delete_temp/<directory_name>', methods=['DELETE'])
-@swag_from({
-    'tags': ['Maintenance'],
-    'summary': 'Delete a temporary directory',
-    'description': 'Deletes a specified directory in the temp folder.',
-    'parameters': [
-        {
-            'name': 'directory_name',
-            'in': 'path',
-            'type': 'string',
-            'required': True,
-            'description': 'The name of the directory to delete',
-            'example': '123e4567-e89b-12d3-a456-426614174000'
-        }
-    ],
-    'responses': {
-        200: {
-            'description': 'Directory deleted successfully',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'message': {'type': 'string', 'example': 'Successfully deleted 123e4567-e89b-12d3-a456-426614174000'}
-                }
-            }
-        },
-        404: {
-            'description': 'Directory not found',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Directory not found'}
-                }
-            }
-        },
-        400: {
-            'description': 'Not a directory',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Specified path is not a directory'}
-                }
-            }
-        },
-        500: {
-            'description': 'Failed to delete directory',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {'type': 'string', 'example': 'Failed to delete 123e4567-e89b-12d3-a456-426614174000'}
-                }
-            }
-        }
-    }
-})
 def delete_temp_directory(directory_name):
+    """
+    Deletes a specified directory in the temp folder.
+    """
     task_dir = os.path.join(BASE_TEMP_DIR, directory_name)
     if not os.path.exists(task_dir):
         return jsonify({"error": "Directory not found"}), 404

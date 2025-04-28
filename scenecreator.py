@@ -26,7 +26,7 @@ def createscenes(topic, num_scenes):
         "X-Title": "Text 2 Video", # Optional. Site title for rankings on openrouter.ai.
     },
     extra_body={},
-    model="google/gemini-2.5-pro-exp-03-25:free",
+    model="google/gemini-2.0-flash-exp:free",
     messages=[
         {
         "role": "user",
