@@ -37,6 +37,7 @@ def create_video(audio_dir="Audio", images_dir="images", output_file="output_mov
         index=int(scene_name.replace("scene", "")) if scene_name.startswith("scene") else 0
         summary_text = scenes_array[index].get("summary", "") if scenes_array else ""
         print("summary",summary_text)
+        """
         text_clip = TextClip(
             text=summary_text,
             font="arial.ttf",
@@ -50,11 +51,13 @@ def create_video(audio_dir="Audio", images_dir="images", output_file="output_mov
             vertical_align="center",
         )
         print("text clip created")
+        """
         # Overlay the TextClip on the ImageClip
-        composite_clip = CompositeVideoClip([image_clip, text_clip])
+        #composite_clip = CompositeVideoClip([image_clip, text_clip])
         
         # Set the audio of the image clip to the loaded audio
-        video_clip = composite_clip.with_audio(audio_clip)
+        #video_clip = composite_clip.with_audio(audio_clip)
+        video_clip = image_clip.set_audio(audio_clip)
         if video_clip.audio is None:
             print(f"Error: Audio not attached to {scene_name}")
         else:
