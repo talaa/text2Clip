@@ -62,6 +62,12 @@ def create_video(audio_dir="Audio", images_dir="images", output_file="output_mov
 
         # Add the video clip to the list
         video_clips.append(video_clip)
+
+        # Close clips to free memory
+        image_clip.close()
+        text_clip.close()
+        composite_clip.close()
+        audio_clip.close()
         
     # Check if we have clips before concatenating
     if video_clips:
